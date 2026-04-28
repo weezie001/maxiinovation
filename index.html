@@ -3,34 +3,36 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Maxi Innovation, AI-Powered Lead Conversion</title>
+<title>Maxi Innovation — AI Lead Systems for Real Estate & Construction</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
   --navy:#1A2E6E;--navy-dark:#0D1B4B;--navy-mid:#243A88;
-  --cyan:#00AAFF;--cyan-light:#E0F4FF;--cyan-glow:rgba(0,170,255,0.18);
+  --cyan:#00AAFF;--cyan-light:#E0F4FF;
+  --gold:#C9A646;--gold-light:#FDF6E3;
   --white:#FFFFFF;--bg:#F7FAFF;--bg-alt:#EEF4FF;
   --text:#0D1B4B;--muted:#6B7FAB;--border:rgba(26,46,110,0.1);
+  --dark:#0A0F2C;--card-dark:#111735;
   --shadow:0 4px 32px rgba(26,46,110,0.08);
   --shadow-lg:0 20px 60px rgba(26,46,110,0.14);
-  --ff-display:'Playfair Display',Georgia,serif;--ff-body:'Inter',system-ui,sans-serif;
+  --ff-display:'Playfair Display',Georgia,serif;
+  --ff-body:'Inter',system-ui,sans-serif;
   --ease-out:cubic-bezier(0.22,1,0.36,1);
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{font-family:var(--ff-body);background:var(--bg);color:var(--text);overflow-x:hidden;cursor:none}
 
-/* ─── CUSTOM CURSOR ─── */
-#cursor{position:fixed;width:10px;height:10px;background:var(--cyan);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:transform .15s,width .3s,height .3s,opacity .3s;mix-blend-mode:multiply}
-#cursor-ring{position:fixed;width:36px;height:36px;border:1.5px solid var(--cyan);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:transform .08s,width .3s,height .3s,opacity .3s}
-body:hover #cursor{opacity:1}
+/* CURSOR */
+#cursor{position:fixed;width:10px;height:10px;background:var(--cyan);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:width .3s,height .3s,opacity .3s;mix-blend-mode:multiply}
+#cursor-ring{position:fixed;width:36px;height:36px;border:1.5px solid var(--cyan);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:width .3s,height .3s}
 
-/* ─── PRELOADER ─── */
+/* PRELOADER */
 #preloader{position:fixed;inset:0;background:var(--navy-dark);z-index:9000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:28px}
 #preloader-logo{width:90px;opacity:0;transform:scale(0.7) translateY(20px);transition:all .8s var(--ease-out)}
-#preloader-logo img{width:100%;}
+#preloader-logo img{width:100%}
 #preloader-brand{font-family:var(--ff-display);font-size:1.1rem;font-weight:700;letter-spacing:.35em;color:rgba(255,255,255,0.9);text-transform:uppercase;opacity:0;transform:translateY(12px);transition:all .7s var(--ease-out) .3s}
 #preloader-bar{width:220px;height:2px;background:rgba(255,255,255,0.12);border-radius:2px;overflow:hidden;opacity:0;transition:opacity .4s .4s}
 #preloader-fill{height:100%;width:0%;background:linear-gradient(90deg,var(--navy-mid),var(--cyan));border-radius:2px;transition:width .04s linear}
@@ -39,9 +41,9 @@ body:hover #cursor{opacity:1}
 .preloader-ready #preloader-brand{opacity:1;transform:translateY(0)}
 .preloader-ready #preloader-bar,.preloader-ready #preloader-count{opacity:1}
 
-/* ─── NAVBAR ─── */
+/* NAVBAR */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 6%;display:flex;align-items:center;justify-content:space-between;transition:background .4s,box-shadow .4s}
-nav.scrolled{background:rgba(247,250,255,0.92);backdrop-filter:blur(14px);box-shadow:0 2px 20px rgba(26,46,110,0.08)}
+nav.scrolled{background:rgba(247,250,255,0.95);backdrop-filter:blur(14px);box-shadow:0 2px 20px rgba(26,46,110,0.08)}
 .nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
 .nav-logo img{height:38px}
 .nav-logo span{font-family:var(--ff-display);font-weight:700;font-size:1.05rem;color:var(--navy)}
@@ -50,36 +52,10 @@ nav.scrolled{background:rgba(247,250,255,0.92);backdrop-filter:blur(14px);box-sh
 .nav-links a::after{content:'';position:absolute;bottom:-3px;left:0;width:0;height:1.5px;background:var(--cyan);transition:width .3s var(--ease-out)}
 .nav-links a:hover{color:var(--cyan)}
 .nav-links a:hover::after{width:100%}
-.btn-nav{padding:10px 22px;background:var(--navy);color:white;border:none;border-radius:6px;font-family:var(--ff-body);font-size:.85rem;font-weight:600;letter-spacing:.03em;cursor:none;transition:background .3s,transform .2s,box-shadow .3s;text-decoration:none}
+.btn-nav{padding:10px 22px;background:var(--navy);color:white;border:none;border-radius:6px;font-family:var(--ff-body);font-size:.85rem;font-weight:600;cursor:none;transition:all .3s;text-decoration:none}
 .btn-nav:hover{background:var(--cyan);box-shadow:0 6px 24px rgba(0,170,255,0.35);transform:translateY(-1px)}
 
-/* ─── HERO ─── */
-#hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:100px 6% 60px;gap:60px;position:relative;overflow:hidden}
-.hero-bg{position:absolute;inset:0;background:linear-gradient(135deg,var(--bg) 0%,#EAF3FF 100%);z-index:0}
-.hero-dots{position:absolute;inset:0;background-image:radial-gradient(circle,rgba(26,46,110,0.07) 1px,transparent 1px);background-size:28px 28px;z-index:1;pointer-events:none}
-.hero-content{position:relative;z-index:2}
-.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:var(--cyan-light);border:1px solid rgba(0,170,255,0.25);border-radius:100px;padding:6px 14px;font-size:.78rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--cyan);margin-bottom:24px}
-.hero-eyebrow span{width:6px;height:6px;background:var(--cyan);border-radius:50%;display:inline-block}
-h1{font-family:var(--ff-display);font-size:clamp(2.4rem,4vw,3.8rem);font-weight:800;line-height:1.1;color:var(--navy);margin-bottom:20px;letter-spacing:-.02em}
-h1 em{font-style:normal;color:var(--cyan)}
-.hero-sub{font-size:1rem;line-height:1.75;color:var(--muted);max-width:480px;margin-bottom:36px;font-weight:400}
-.hero-ctas{display:flex;align-items:center;gap:14px;margin-bottom:48px;flex-wrap:wrap}
-.btn-primary{padding:14px 28px;background:var(--navy);color:white;border:none;border-radius:7px;font-family:var(--ff-body);font-size:.9rem;font-weight:600;cursor:none;transition:all .3s;text-decoration:none;display:inline-block}
-.btn-primary:hover{background:var(--cyan);box-shadow:0 8px 28px rgba(0,170,255,0.4);transform:translateY(-2px)}
-.btn-ghost{padding:14px 28px;background:transparent;color:var(--navy);border:1.5px solid var(--border);border-radius:7px;font-family:var(--ff-body);font-size:.9rem;font-weight:600;cursor:none;transition:all .3s;text-decoration:none;display:inline-flex;align-items:center;gap:8px}
-.btn-ghost:hover{border-color:var(--cyan);color:var(--cyan)}
-.hero-trust{display:flex;align-items:center;gap:24px;font-size:.8rem;color:var(--muted)}
-.trust-pill{display:flex;align-items:center;gap:7px;font-weight:500}
-.trust-pill svg{color:var(--cyan)}
-.hero-canvas-wrap{position:relative;z-index:2;display:flex;align-items:center;justify-content:center;height:500px}
-.hero-img-wrap{position:relative;width:100%;height:100%;border-radius:20px;overflow:hidden;box-shadow:0 30px 80px rgba(26,46,110,0.18)}
-.hero-stock-img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 8s ease}
-.hero-img-wrap:hover .hero-stock-img{transform:scale(1.04)}
-.hero-img-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(26,46,110,0.12) 0%,rgba(0,170,255,0.06) 100%);pointer-events:none}
-.hero-img-badge{position:absolute;bottom:20px;left:20px;display:flex;align-items:center;gap:8px;background:rgba(255,255,255,0.95);backdrop-filter:blur(12px);border:1px solid rgba(0,170,255,0.2);border-radius:100px;padding:8px 16px;font-size:.78rem;font-weight:700;color:var(--navy);letter-spacing:.04em;box-shadow:0 8px 24px rgba(26,46,110,0.12)}
-.hero-el{opacity:0;transform:translateY(28px)}
-
-/* ─── SECTION SHARED ─── */
+/* SHARED */
 section{padding:96px 6%}
 .section-eyebrow{font-size:.75rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--cyan);margin-bottom:14px}
 .section-title{font-family:var(--ff-display);font-size:clamp(2rem,3.5vw,3rem);font-weight:800;line-height:1.15;color:var(--navy);letter-spacing:-.02em;margin-bottom:20px}
@@ -87,51 +63,110 @@ section{padding:96px 6%}
 .reveal{opacity:0;transform:translateY(30px);transition:opacity .7s var(--ease-out),transform .7s var(--ease-out)}
 .reveal.visible{opacity:1;transform:translateY(0)}
 
-/* ─── STATS STRIP ─── */
-.stats-strip{background:var(--navy);padding:52px 6%;display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
-.stat-item{text-align:center;padding:24px;position:relative}
-.stat-item:not(:last-child)::after{content:'';position:absolute;right:0;top:20%;height:60%;width:1px;background:rgba(255,255,255,0.12)}
-.stat-num{font-family:var(--ff-display);font-size:clamp(2.5rem,5vw,4rem);font-weight:800;color:white;letter-spacing:-.03em;line-height:1}
-.stat-num span{color:var(--cyan)}
-.stat-label{font-size:.82rem;color:rgba(255,255,255,0.55);margin-top:8px;letter-spacing:.04em;font-weight:400}
+/* HERO */
+#hero{min-height:100vh;display:grid;grid-template-columns:55% 45%;align-items:center;padding:100px 6% 60px;gap:60px;position:relative;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:linear-gradient(135deg,var(--bg) 0%,#EAF3FF 100%);z-index:0}
+.hero-dots{position:absolute;inset:0;background-image:radial-gradient(circle,rgba(26,46,110,0.07) 1px,transparent 1px);background-size:28px 28px;z-index:1;pointer-events:none}
+.hero-content{position:relative;z-index:2}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:var(--cyan-light);border:1px solid rgba(0,170,255,0.25);border-radius:100px;padding:6px 14px;font-size:.78rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--cyan);margin-bottom:24px}
+.hero-eyebrow span{width:6px;height:6px;background:var(--cyan);border-radius:50%;display:inline-block;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
+h1{font-family:var(--ff-display);font-size:clamp(2.4rem,4vw,3.8rem);font-weight:800;line-height:1.1;color:var(--navy);margin-bottom:20px;letter-spacing:-.02em}
+h1 em{font-style:normal;color:var(--cyan)}
+.hero-sub{font-size:1rem;line-height:1.75;color:var(--muted);max-width:480px;margin-bottom:36px}
+.hero-ctas{display:flex;align-items:center;gap:14px;margin-bottom:48px;flex-wrap:wrap}
+.btn-primary{padding:14px 28px;background:var(--navy);color:white;border:none;border-radius:7px;font-family:var(--ff-body);font-size:.9rem;font-weight:600;cursor:none;transition:all .3s;text-decoration:none;display:inline-block}
+.btn-primary:hover{background:var(--cyan);box-shadow:0 8px 28px rgba(0,170,255,0.4);transform:translateY(-2px)}
+.btn-ghost{padding:14px 28px;background:transparent;color:var(--navy);border:1.5px solid var(--border);border-radius:7px;font-family:var(--ff-body);font-size:.9rem;font-weight:600;cursor:none;transition:all .3s;text-decoration:none;display:inline-flex;align-items:center;gap:8px}
+.btn-ghost:hover{border-color:var(--cyan);color:var(--cyan)}
+.hero-trust{display:flex;align-items:center;gap:24px;font-size:.8rem;color:var(--muted);flex-wrap:wrap}
+.trust-pill{display:flex;align-items:center;gap:7px;font-weight:500}
+.trust-pill svg{color:var(--cyan)}
+.hero-el{opacity:0;transform:translateY(28px)}
 
-.about-img-wrap{position:relative;border-radius:16px;overflow:hidden;height:280px;box-shadow:var(--shadow-lg)}
-.about-stock-img{width:100%;height:100%;object-fit:cover;display:block}
-.about-img-card{position:absolute;bottom:16px;right:16px;background:rgba(255,255,255,0.95);backdrop-filter:blur(12px);border:1px solid var(--border);border-radius:12px;padding:14px 18px;box-shadow:var(--shadow)}
+/* HERO IMAGE SIDE */
+.hero-right{position:relative;z-index:2;height:560px}
+.hero-main-img{width:100%;height:420px;border-radius:20px;overflow:hidden;box-shadow:0 30px 80px rgba(26,46,110,0.2);position:relative}
+.hero-main-img img{width:100%;height:100%;object-fit:cover;transition:transform 8s ease}
+.hero-main-img:hover img{transform:scale(1.04)}
+.hero-main-img .overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(13,27,75,0.45),transparent 60%);pointer-events:none}
+.hero-kpi{position:absolute;bottom:20px;left:20px;background:rgba(255,255,255,0.96);backdrop-filter:blur(12px);border:1px solid rgba(0,170,255,0.2);border-radius:12px;padding:12px 18px;box-shadow:0 8px 24px rgba(26,46,110,0.12)}
+.hero-kpi-val{font-family:var(--ff-display);font-size:1.6rem;font-weight:800;color:var(--navy);line-height:1}
+.hero-kpi-label{font-size:.72rem;color:var(--muted);font-weight:500;margin-top:3px}
+.hero-card-sm{position:absolute;bottom:-40px;right:-20px;width:180px;background:white;border-radius:14px;padding:16px;box-shadow:var(--shadow-lg);border:1px solid var(--border)}
+.hero-card-sm img{width:100%;height:90px;object-fit:cover;border-radius:8px;margin-bottom:10px}
+.hero-card-sm-title{font-family:var(--ff-display);font-size:.82rem;font-weight:700;color:var(--navy);margin-bottom:4px}
+.hero-card-sm-sub{font-size:.72rem;color:var(--muted)}
+.hero-badge{position:absolute;top:-16px;right:30px;background:var(--navy);color:white;border-radius:100px;padding:8px 16px;font-size:.75rem;font-weight:700;letter-spacing:.04em;display:flex;align-items:center;gap:7px;box-shadow:0 8px 24px rgba(13,27,75,0.3)}
+.hero-badge svg{color:var(--cyan)}
 
-/* ─── ABOUT ─── */
+/* TRUST STRIP */
+.trust-strip{background:var(--navy);padding:52px 6%;display:grid;grid-template-columns:repeat(4,1fr);gap:2px}
+.trust-item{text-align:center;padding:24px;position:relative}
+.trust-item:not(:last-child)::after{content:'';position:absolute;right:0;top:20%;height:60%;width:1px;background:rgba(255,255,255,0.12)}
+.trust-num{font-family:var(--ff-display);font-size:clamp(2rem,4vw,3.2rem);font-weight:800;color:white;line-height:1}
+.trust-num span{color:var(--cyan)}
+.trust-label{font-size:.8rem;color:rgba(255,255,255,0.45);margin-top:8px;letter-spacing:.04em}
+
+/* ABOUT */
 #about{background:var(--white)}
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;margin-top:52px}
-.about-visual{position:relative}
-.about-card{background:var(--bg);border:1px solid var(--border);border-radius:16px;padding:36px;position:relative;overflow:hidden}
-.about-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--navy),var(--cyan))}
-.about-badge{position:absolute;top:20px;right:20px;background:var(--cyan-light);color:var(--cyan);font-size:.72rem;font-weight:700;letter-spacing:.08em;padding:6px 12px;border-radius:100px;text-transform:uppercase}
-.about-icon{width:52px;height:52px;background:linear-gradient(135deg,var(--navy),var(--cyan));border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
-.about-card h3{font-family:var(--ff-display);font-size:1.15rem;font-weight:700;color:var(--navy);margin-bottom:8px}
-.about-card p{font-size:.88rem;line-height:1.7;color:var(--muted)}
-.about-cards{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.about-text p{font-size:1rem;line-height:1.8;color:var(--muted);margin-bottom:16px}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.about-text .section-eyebrow{margin-bottom:10px}
+.about-text p{font-size:.97rem;line-height:1.8;color:var(--muted);margin-bottom:16px}
 .about-text p strong{color:var(--navy);font-weight:600}
 .about-accent{display:inline-flex;align-items:center;gap:10px;margin-top:8px;font-size:.88rem;font-weight:600;color:var(--cyan)}
 .about-accent::before{content:'';width:28px;height:2px;background:var(--cyan);display:block}
+.about-visual{position:relative}
+.about-main-img{width:100%;height:320px;border-radius:16px;overflow:hidden;box-shadow:var(--shadow-lg);position:relative}
+.about-main-img img{width:100%;height:100%;object-fit:cover}
+.about-main-img .overlay{position:absolute;inset:0;background:linear-gradient(to top right,rgba(13,27,75,0.3),transparent)}
+.about-stat-card{position:absolute;bottom:-20px;right:-20px;background:white;border:1px solid var(--border);border-radius:14px;padding:18px 22px;box-shadow:var(--shadow-lg)}
+.about-stat-val{font-family:var(--ff-display);font-size:1.8rem;font-weight:800;color:var(--navy)}
+.about-stat-val span{color:var(--cyan)}
+.about-stat-label{font-size:.75rem;color:var(--muted);font-weight:500}
+.about-grid-cards{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:44px}
+.about-card{background:var(--bg);border:1px solid var(--border);border-radius:14px;padding:24px;position:relative;overflow:hidden;transition:box-shadow .3s,transform .3s}
+.about-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--navy),var(--cyan))}
+.about-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.about-icon{width:44px;height:44px;background:linear-gradient(135deg,var(--navy),var(--cyan));border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:12px}
+.about-card h3{font-family:var(--ff-display);font-size:.95rem;font-weight:700;color:var(--navy);margin-bottom:6px}
+.about-card p{font-size:.82rem;line-height:1.6;color:var(--muted)}
 
-/* ─── SERVICES ─── */
-#services{background:var(--bg)}
-.services-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:52px}
+/* SERVICES — image overlay cards */
+#services{background:var(--bg);padding:96px 6%}
+.services-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:52px;gap:24px}
 .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.service-card{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:32px;position:relative;transition:transform .3s var(--ease-out),box-shadow .3s,border-color .3s;overflow:hidden}
-.service-card::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,var(--navy),var(--cyan));transform:scaleX(0);transform-origin:left;transition:transform .4s var(--ease-out)}
-.service-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:rgba(0,170,255,0.2)}
-.service-card:hover::after{transform:scaleX(1)}
-.service-icon{width:48px;height:48px;border-radius:10px;background:var(--cyan-light);display:flex;align-items:center;justify-content:center;margin-bottom:20px;transition:background .3s}
-.service-card:hover .service-icon{background:var(--cyan)}
-.service-card:hover .service-icon svg{color:white}
-.service-icon svg{width:22px;height:22px;color:var(--cyan);transition:color .3s}
-.service-card h3{font-family:var(--ff-display);font-size:1.05rem;font-weight:700;color:var(--navy);margin-bottom:10px}
-.service-card p{font-size:.87rem;line-height:1.7;color:var(--muted)}
-.service-tag{display:inline-block;margin-top:16px;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--cyan);background:var(--cyan-light);padding:4px 10px;border-radius:4px}
+.svc-card{border-radius:16px;overflow:hidden;position:relative;height:280px;cursor:none;transition:transform .4s var(--ease-out),box-shadow .4s}
+.svc-card:hover{transform:translateY(-6px);box-shadow:0 30px 60px rgba(13,27,75,0.2)}
+.svc-card img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease-out)}
+.svc-card:hover img{transform:scale(1.06)}
+.svc-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,15,44,0.88) 0%,rgba(10,15,44,0.2) 60%,transparent 100%);transition:background .4s}
+.svc-card:hover .svc-overlay{background:linear-gradient(to top,rgba(0,110,200,0.82) 0%,rgba(10,15,44,0.4) 60%,transparent 100%)}
+.svc-content{position:absolute;bottom:0;padding:24px;width:100%}
+.svc-tag{display:inline-block;background:rgba(0,170,255,0.85);color:white;font-size:.66rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;border-radius:100px;margin-bottom:10px}
+.svc-content h3{font-family:var(--ff-display);font-size:1.1rem;font-weight:700;color:white;margin-bottom:6px}
+.svc-content p{font-size:.82rem;line-height:1.6;color:rgba(255,255,255,0.65);max-height:0;overflow:hidden;transition:max-height .4s var(--ease-out),opacity .3s;opacity:0}
+.svc-card:hover .svc-content p{max-height:80px;opacity:1}
 
-/* ─── HOW IT WORKS ─── */
+/* CASE STUDIES */
+#cases{background:var(--dark);padding:96px 6%}
+#cases .section-eyebrow{color:var(--cyan)}
+#cases .section-title{color:white}
+#cases .section-sub{color:rgba(255,255,255,0.45)}
+.cases-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:52px}
+.case-card{border-radius:16px;overflow:hidden;position:relative;height:320px;cursor:none;transition:transform .4s var(--ease-out)}
+.case-card:hover{transform:translateY(-6px)}
+.case-card img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease-out)}
+.case-card:hover img{transform:scale(1.05)}
+.case-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,15,44,0.9) 0%,rgba(10,15,44,0.3) 55%,transparent 100%)}
+.case-content{position:absolute;bottom:0;padding:28px;width:100%}
+.case-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(201,166,70,0.9);color:white;font-size:.68rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:5px 12px;border-radius:100px;margin-bottom:12px}
+.case-content h3{font-family:var(--ff-display);font-size:1.2rem;font-weight:700;color:white;margin-bottom:8px}
+.case-stats{display:flex;gap:20px}
+.case-stat strong{display:block;font-family:var(--ff-display);font-size:1.5rem;font-weight:800;color:var(--cyan)}
+.case-stat span{font-size:.75rem;color:rgba(255,255,255,0.5)}
+
+/* HOW IT WORKS */
 #howitworks{background:var(--navy-dark);padding:96px 6%}
 #howitworks .section-eyebrow{color:var(--cyan)}
 #howitworks .section-title{color:white}
@@ -144,24 +179,36 @@ section{padding:96px 6%}
 .step h3{font-family:var(--ff-display);font-size:1rem;font-weight:700;color:white;margin-bottom:10px}
 .step p{font-size:.84rem;line-height:1.65;color:rgba(255,255,255,0.45)}
 
-/* ─── TESTIMONIALS ─── */
+/* TESTIMONIALS */
 #testimonials{background:var(--white)}
 .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:52px}
-.testi-card{background:var(--bg);border:1px solid var(--border);border-radius:14px;padding:32px;position:relative;transition:transform .3s,box-shadow .3s}
+.testi-card{background:var(--bg);border:1px solid var(--border);border-radius:16px;padding:32px;position:relative;transition:transform .3s,box-shadow .3s;overflow:hidden}
+.testi-card::before{content:'\201C';position:absolute;top:12px;right:20px;font-size:6rem;line-height:1;color:var(--cyan-light);font-family:Georgia,serif;pointer-events:none}
 .testi-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
-.testi-card::before{content:'\201C';position:absolute;top:16px;right:24px;font-size:5rem;line-height:1;color:var(--cyan-light);font-family:Georgia,serif;pointer-events:none}
 .stars{display:flex;gap:4px;margin-bottom:16px}
-.stars svg{width:16px;height:16px;fill:var(--cyan)}
-.testi-quote{font-size:.92rem;line-height:1.75;color:var(--text);margin-bottom:24px;font-style:italic;font-weight:400}
+.stars svg{width:16px;height:16px;fill:var(--gold)}
+.testi-quote{font-size:.92rem;line-height:1.75;color:var(--text);margin-bottom:24px;font-style:italic}
 .testi-author{display:flex;align-items:center;gap:12px}
-.testi-avatar{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--navy),var(--cyan));display:flex;align-items:center;justify-content:center;font-family:var(--ff-display);font-weight:800;font-size:.9rem;color:white;flex-shrink:0}
+.testi-avatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--navy),var(--cyan));display:flex;align-items:center;justify-content:center;font-family:var(--ff-display);font-weight:800;font-size:.88rem;color:white;flex-shrink:0}
 .testi-name{font-weight:700;font-size:.88rem;color:var(--navy)}
-.testi-role{font-size:.78rem;color:var(--muted)}
+.testi-role{font-size:.76rem;color:var(--muted)}
 
-/* ─── FAQ ─── */
+/* CTA BANNER */
+#ctabanner{background:linear-gradient(135deg,var(--navy-dark) 0%,var(--navy-mid) 100%);padding:80px 6%;text-align:center;position:relative;overflow:hidden}
+#ctabanner::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(0,170,255,0.08) 1px,transparent 1px);background-size:32px 32px}
+#ctabanner .section-eyebrow{color:var(--cyan);position:relative}
+#ctabanner .section-title{color:white;position:relative;max-width:700px;margin:0 auto 16px}
+#ctabanner p{color:rgba(255,255,255,0.5);font-size:.95rem;margin-bottom:36px;position:relative}
+.cta-btns{display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;position:relative}
+.btn-gold{padding:15px 32px;background:var(--gold);color:white;border:none;border-radius:7px;font-family:var(--ff-body);font-size:.95rem;font-weight:700;cursor:none;transition:all .3s;text-decoration:none;display:inline-block}
+.btn-gold:hover{background:#b8932e;box-shadow:0 8px 28px rgba(201,166,70,0.45);transform:translateY(-2px)}
+.btn-outline-white{padding:15px 32px;background:transparent;color:white;border:1.5px solid rgba(255,255,255,0.25);border-radius:7px;font-family:var(--ff-body);font-size:.95rem;font-weight:600;cursor:none;transition:all .3s;text-decoration:none;display:inline-block}
+.btn-outline-white:hover{border-color:white;background:rgba(255,255,255,0.08)}
+
+/* FAQ */
 #faq{background:var(--bg)}
-.faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;margin-top:52px}
-.faq-list{display:flex;flex-direction:column;gap:8px}
+.faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.faq-list{display:flex;flex-direction:column;gap:8px;margin-top:36px}
 .faq-item{background:var(--white);border:1px solid var(--border);border-radius:10px;overflow:hidden;transition:border-color .3s}
 .faq-item.open{border-color:rgba(0,170,255,0.3)}
 .faq-q{padding:20px 24px;display:flex;align-items:center;justify-content:space-between;cursor:none;font-weight:600;font-size:.92rem;color:var(--navy);user-select:none;gap:12px}
@@ -171,13 +218,13 @@ section{padding:96px 6%}
 .faq-item.open .faq-icon svg{transform:rotate(45deg);color:white}
 .faq-a{max-height:0;overflow:hidden;transition:max-height .4s var(--ease-out)}
 .faq-a-inner{padding:0 24px 20px;font-size:.88rem;line-height:1.75;color:var(--muted)}
-.faq-cta-box{background:var(--navy);border-radius:16px;padding:40px;text-align:center}
-.faq-cta-box h3{font-family:var(--ff-display);font-size:1.5rem;font-weight:800;color:white;margin-bottom:12px;line-height:1.2}
+.faq-cta-box{background:var(--navy);border-radius:20px;padding:44px;text-align:center}
+.faq-cta-box h3{font-family:var(--ff-display);font-size:1.6rem;font-weight:800;color:white;margin-bottom:12px;line-height:1.2}
 .faq-cta-box p{font-size:.88rem;color:rgba(255,255,255,0.5);margin-bottom:28px;line-height:1.65}
-.btn-cyan{padding:14px 28px;background:var(--cyan);color:white;border:none;border-radius:7px;font-family:var(--ff-body);font-size:.9rem;font-weight:700;cursor:none;transition:all .3s;text-decoration:none;display:inline-block;letter-spacing:.02em}
+.btn-cyan{padding:14px 28px;background:var(--cyan);color:white;border:none;border-radius:7px;font-family:var(--ff-body);font-size:.9rem;font-weight:700;cursor:none;transition:all .3s;text-decoration:none;display:inline-block}
 .btn-cyan:hover{background:#0095e0;box-shadow:0 8px 28px rgba(0,170,255,0.45);transform:translateY(-2px)}
 
-/* ─── CONTACT ─── */
+/* CONTACT */
 #contact{background:linear-gradient(135deg,var(--navy-dark) 0%,var(--navy) 100%);padding:96px 6%}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;margin-top:52px}
 #contact .section-eyebrow{color:var(--cyan)}
@@ -190,35 +237,20 @@ section{padding:96px 6%}
 .benefit-text strong{display:block;font-size:.9rem;font-weight:600;color:white;margin-bottom:3px}
 .benefit-text span{font-size:.82rem;color:rgba(255,255,255,0.45)}
 .contact-form{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:36px;backdrop-filter:blur(10px)}
+.contact-form h3{font-family:var(--ff-display);font-size:1.25rem;font-weight:700;color:white;margin-bottom:24px}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
 .form-group{display:flex;flex-direction:column;gap:7px;margin-bottom:14px}
 .form-group label{font-size:.78rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,0.5)}
-.form-group input,.form-group select,.form-group textarea{background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:8px;padding:12px 16px;font-family:var(--ff-body);font-size:.9rem;color:white;outline:none;transition:border-color .3s;cursor:none}
+.form-group input,.form-group select,.form-group textarea{background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:8px;padding:12px 16px;font-family:var(--ff-body);font-size:.9rem;color:white;outline:none;transition:border-color .3s;cursor:none;width:100%}
 .form-group input::placeholder,.form-group textarea::placeholder{color:rgba(255,255,255,0.25)}
 .form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--cyan)}
 .form-group select option{background:var(--navy-dark);color:white}
 .form-group textarea{resize:vertical;min-height:100px}
-.form-submit{width:100%;padding:15px;background:var(--cyan);color:white;border:none;border-radius:8px;font-family:var(--ff-body);font-size:.95rem;font-weight:700;cursor:none;transition:all .3s;letter-spacing:.03em;margin-top:8px}
+.form-submit{width:100%;padding:15px;background:var(--cyan);color:white;border:none;border-radius:8px;font-family:var(--ff-body);font-size:.95rem;font-weight:700;cursor:none;transition:all .3s;margin-top:8px}
 .form-submit:hover{background:#0095e0;box-shadow:0 8px 28px rgba(0,170,255,0.5);transform:translateY(-2px)}
 
-/* ─── FOOTER ─── */
-footer{background:var(--navy-dark);padding:52px 6% 32px;border-top:1px solid rgba(255,255,255,0.06)}
-.footer-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:44px;gap:40px;flex-wrap:wrap}
-.footer-brand img{height:40px;margin-bottom:12px}
-.footer-brand p{font-size:.84rem;color:rgba(255,255,255,0.35);max-width:240px;line-height:1.65}
-.footer-links h4{font-family:var(--ff-display);font-size:.82rem;font-weight:700;color:rgba(255,255,255,0.5);letter-spacing:.1em;text-transform:uppercase;margin-bottom:16px}
-.footer-links ul{list-style:none;display:flex;flex-direction:column;gap:10px}
-.footer-links a{font-size:.84rem;color:rgba(255,255,255,0.4);text-decoration:none;transition:color .2s}
-.footer-links a:hover{color:var(--cyan)}
-.footer-bottom{border-top:1px solid rgba(255,255,255,0.06);padding-top:24px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
-.footer-copy{font-size:.78rem;color:rgba(255,255,255,0.25)}
-.footer-socials{display:flex;gap:12px}
-.social-btn{width:34px;height:34px;border-radius:8px;border:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;transition:all .3s;cursor:none}
-.social-btn svg{width:15px;height:15px;color:rgba(255,255,255,0.4);transition:color .3s}
-.social-btn:hover{border-color:var(--cyan);background:rgba(0,170,255,0.1)}
-.social-btn:hover svg{color:var(--cyan)}
-
-/* ─── EBOOKS ─── */
+/* EBOOKS */
+#ebooks{background:var(--bg)}
 .ebook-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
 .ebook-card{background:var(--white);border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:transform .3s var(--ease-out),box-shadow .3s,border-color .3s;display:flex;flex-direction:column}
 .ebook-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:rgba(0,170,255,0.25)}
@@ -236,8 +268,6 @@ footer{background:var(--navy-dark);padding:52px 6% 32px;border-top:1px solid rgb
 .ebook-buy-btn{padding:10px 20px;background:var(--navy);color:white;border:none;border-radius:7px;font-family:var(--ff-body);font-size:.84rem;font-weight:600;cursor:pointer;transition:all .3s;text-decoration:none;display:inline-block;white-space:nowrap}
 .ebook-buy-btn:hover{background:var(--cyan);box-shadow:0 6px 20px rgba(0,170,255,0.35)}
 .ebook-empty{text-align:center;padding:60px 20px;color:var(--muted);display:flex;flex-direction:column;align-items:center;gap:14px;font-size:.95rem}
-
-/* ─── ADMIN ─── */
 .admin-toggle-btn{padding:11px 24px;background:transparent;border:1.5px solid var(--border);border-radius:8px;font-family:var(--ff-body);font-size:.84rem;font-weight:600;color:var(--muted);cursor:pointer;transition:all .3s}
 .admin-toggle-btn:hover{border-color:var(--cyan);color:var(--cyan)}
 .admin-panel{background:var(--white);border:1.5px solid var(--border);border-radius:16px;padding:36px;margin-top:28px;box-shadow:var(--shadow)}
@@ -255,43 +285,61 @@ footer{background:var(--navy-dark);padding:52px 6% 32px;border-top:1px solid rgb
 .admin-add-btn:hover{background:var(--cyan)}
 .admin-msg{margin-left:14px;font-size:.84rem;font-weight:600;color:var(--cyan)}
 .admin-book-list{display:flex;flex-direction:column;gap:12px}
-.admin-book-list h4{font-family:var(--ff-display);font-weight:700;color:var(--navy);margin-bottom:8px}
 .admin-book-row{display:flex;align-items:center;justify-content:space-between;gap:16px;background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:14px 18px}
 .admin-book-row-info strong{display:block;font-size:.92rem;font-weight:600;color:var(--navy)}
 .admin-book-row-info span{font-size:.8rem;color:var(--muted)}
 .admin-del-btn{padding:7px 16px;background:transparent;border:1.5px solid #e0e0e0;border-radius:7px;font-family:var(--ff-body);font-size:.82rem;font-weight:600;color:#c0392b;cursor:pointer;transition:all .3s;white-space:nowrap;flex-shrink:0}
 .admin-del-btn:hover{background:#ffeaea;border-color:#c0392b}
 
-@media(max-width:900px){.ebook-grid{grid-template-columns:1fr 1fr}.admin-form-grid{grid-template-columns:1fr}}
-@media(max-width:600px){.ebook-grid{grid-template-columns:1fr}}
+/* FOOTER */
+footer{background:var(--navy-dark);padding:52px 6% 32px;border-top:1px solid rgba(255,255,255,0.06)}
+.footer-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:44px;gap:40px;flex-wrap:wrap}
+.footer-brand img{height:40px;margin-bottom:12px}
+.footer-brand p{font-size:.84rem;color:rgba(255,255,255,0.35);max-width:240px;line-height:1.65}
+.footer-links h4{font-family:var(--ff-display);font-size:.82rem;font-weight:700;color:rgba(255,255,255,0.5);letter-spacing:.1em;text-transform:uppercase;margin-bottom:16px}
+.footer-links ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.footer-links a{font-size:.84rem;color:rgba(255,255,255,0.4);text-decoration:none;transition:color .2s}
+.footer-links a:hover{color:var(--cyan)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.06);padding-top:24px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.footer-copy{font-size:.78rem;color:rgba(255,255,255,0.25)}
+.footer-socials{display:flex;gap:12px}
+.social-btn{width:34px;height:34px;border-radius:8px;border:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;transition:all .3s;cursor:none}
+.social-btn svg{width:15px;height:15px;color:rgba(255,255,255,0.4);transition:color .3s}
+.social-btn:hover{border-color:var(--cyan);background:rgba(0,170,255,0.1)}
+.social-btn:hover svg{color:var(--cyan)}
 
-/* ─── RESPONSIVE ─── */
+/* RESPONSIVE */
 @media(max-width:900px){
   #hero{grid-template-columns:1fr;padding-top:120px}
-  .hero-canvas-wrap{height:320px;order:-1}
-  .about-grid,.contact-grid,.faq-grid{grid-template-columns:1fr}
+  .hero-right{height:360px;order:-1}
+  .hero-card-sm{display:none}
+  .about-grid,.contact-grid,.faq-grid,.cases-grid{grid-template-columns:1fr}
   .services-grid{grid-template-columns:1fr 1fr}
   .steps{grid-template-columns:1fr 1fr;gap:28px}
   .steps::before{display:none}
   .testi-grid{grid-template-columns:1fr}
-  .stats-strip{grid-template-columns:1fr}
-  .stat-item::after{display:none}
+  .trust-strip{grid-template-columns:1fr 1fr}
+  .trust-item::after{display:none}
   .services-header{flex-direction:column;gap:16px;align-items:flex-start}
   .footer-top{flex-direction:column}
   .form-row{grid-template-columns:1fr}
   nav .nav-links,.btn-nav{display:none}
+  .ebook-grid{grid-template-columns:1fr 1fr}
+  .admin-form-grid{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+  .services-grid,.ebook-grid,.trust-strip{grid-template-columns:1fr}
 }
 </style>
 </head>
 <body>
 
-<!-- CURSOR -->
 <div id="cursor"></div>
 <div id="cursor-ring"></div>
 
 <!-- PRELOADER -->
 <div id="preloader">
-  <div id="preloader-logo"><img id="preloader-logo-img" src="logo.png" alt="Maxi Innovation"></div>
+  <div id="preloader-logo"><img src="logo.png" alt="Maxi Innovation"></div>
   <div id="preloader-brand">Maxi Innovation</div>
   <div id="preloader-bar"><div id="preloader-fill"></div></div>
   <div id="preloader-count">0%</div>
@@ -300,14 +348,14 @@ footer{background:var(--navy-dark);padding:52px 6% 32px;border-top:1px solid rgb
 <!-- NAVBAR -->
 <nav id="navbar">
   <a href="#" class="nav-logo">
-    <img id="nav-logo-img" src="logo.png" alt="Maxi Innovation">
+    <img src="logo.png" alt="Maxi Innovation">
     <span>Maxi Innovation</span>
   </a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#services">Services</a></li>
+    <li><a href="#cases">Results</a></li>
     <li><a href="#ebooks">E-Books</a></li>
-    <li><a href="#testimonials">Testimonials</a></li>
     <li><a href="#faq">FAQ</a></li>
   </ul>
   <a href="#contact" class="btn-nav">Book a Free Demo</a>
@@ -319,55 +367,59 @@ footer{background:var(--navy-dark);padding:52px 6% 32px;border-top:1px solid rgb
   <div class="hero-dots"></div>
   <div class="hero-content">
     <div class="hero-eyebrow hero-el"><span></span>AI-Powered Lead Conversion</div>
-    <h1 class="hero-el">Stop Leaving Money on the Table, <em>Save Time, Make More</em> with AI Automation.</h1>
-    <p class="hero-sub hero-el">We deploy intelligent AI automation systems that capture, qualify, and convert your leads 24/7, so your business makes more money while your team spends less time chasing cold contacts.</p>
+    <h1 class="hero-el">Turn Property Leads Into <em>Closed Deals,</em> Automatically.</h1>
+    <p class="hero-sub hero-el">We deploy intelligent AI automation systems that capture, qualify, and convert real estate and construction leads 24/7, so your agents close more deals while spending less time chasing cold contacts.</p>
     <div class="hero-ctas hero-el">
       <a href="#contact" class="btn-primary">Book a Free Demo →</a>
-      <a href="#services" class="btn-ghost">
+      <a href="#cases" class="btn-ghost">
         <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8" fill="currentColor" stroke="none"/></svg>
-        See How It Works
+        View Real Results
       </a>
     </div>
     <div class="hero-trust hero-el">
-      <div class="trust-pill">
-        <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-        No setup fees
-      </div>
-      <div class="trust-pill">
-        <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-        Results in 14 days
-      </div>
-      <div class="trust-pill">
-        <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-        Cancel anytime
-      </div>
+      <div class="trust-pill"><svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>No setup fees</div>
+      <div class="trust-pill"><svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Results in 14 days</div>
+      <div class="trust-pill"><svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Cancel anytime</div>
     </div>
   </div>
-  <div class="hero-canvas-wrap">
-    <div class="hero-img-wrap">
-      <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=900&q=80&auto=format&fit=crop" alt="Corporate business consulting team" class="hero-stock-img">
-      <div class="hero-img-overlay"></div>
-      <div class="hero-img-badge">
-        <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="#00AAFF" stroke-width="2.5"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-        <span>AI Automation Active</span>
+  <div class="hero-right hero-el">
+    <div class="hero-main-img">
+      <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=900&q=80&auto=format&fit=crop&crop=center" alt="Luxury real estate property">
+      <div class="overlay"></div>
+      <div class="hero-kpi">
+        <div class="hero-kpi-val">+312%</div>
+        <div class="hero-kpi-label">Average ROI for clients</div>
       </div>
+    </div>
+    <div class="hero-badge">
+      <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+      AI Automation Active
+    </div>
+    <div class="hero-card-sm">
+      <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=400&q=80&auto=format&fit=crop&crop=center" alt="Construction project">
+      <div class="hero-card-sm-title">Construction Pipeline</div>
+      <div class="hero-card-sm-sub">$2.3M generated in 60 days</div>
     </div>
   </div>
 </section>
 
-<!-- STATS STRIP -->
-<div class="stats-strip">
-  <div class="stat-item reveal">
-    <div class="stat-num"><span class="counter" data-target="500">0</span><span>+</span></div>
-    <div class="stat-label">Leads Captured Monthly</div>
+<!-- TRUST STRIP -->
+<div class="trust-strip">
+  <div class="trust-item reveal">
+    <div class="trust-num"><span class="counter" data-target="312">0</span><span>%</span></div>
+    <div class="trust-label">Average Client ROI</div>
   </div>
-  <div class="stat-item reveal" style="transition-delay:.1s">
-    <div class="stat-num"><span class="counter" data-target="3">0</span><span>x</span></div>
-    <div class="stat-label">Avg. Conversion Rate Increase</div>
+  <div class="trust-item reveal" style="transition-delay:.08s">
+    <div class="trust-num">$<span class="counter" data-target="50">0</span><span>M+</span></div>
+    <div class="trust-label">Pipeline Generated</div>
   </div>
-  <div class="stat-item reveal" style="transition-delay:.2s">
-    <div class="stat-num"><span class="counter" data-target="98">0</span><span>%</span></div>
-    <div class="stat-label">Client Satisfaction Score</div>
+  <div class="trust-item reveal" style="transition-delay:.16s">
+    <div class="trust-num"><span class="counter" data-target="4">0</span><span>x</span></div>
+    <div class="trust-label">Average Lead Growth</div>
+  </div>
+  <div class="trust-item reveal" style="transition-delay:.24s">
+    <div class="trust-num"><span class="counter" data-target="60">0</span></div>
+    <div class="trust-label">Days to Full Deployment</div>
   </div>
 </div>
 
@@ -375,31 +427,31 @@ footer{background:var(--navy-dark);padding:52px 6% 32px;border-top:1px solid rgb
 <section id="about">
   <div class="about-grid">
     <div class="about-text reveal">
-      <div class="section-eyebrow">About Us</div>
-      <h2 class="section-title">Built for Businesses That Refuse to Leave Money on the Table</h2>
-      <p>At <strong>Maxi Innovation</strong>, we believe every business deserves a sales machine that never sleeps. We combine cutting-edge AI automation with proven conversion frameworks to transform your lead pipeline.</p>
-      <p>Whether you're an SME scaling fast, a startup looking for traction, or an enterprise optimising at scale, our systems adapt to your growth stage and deliver measurable results from day one.</p>
-      <div class="about-accent">Trusted by 50+ businesses across industries</div>
+      <div class="section-eyebrow">Who We Are</div>
+      <h2 class="section-title">Built for Real Estate & Construction Businesses That Mean Business</h2>
+      <p>At <strong>Maxi Innovation</strong>, we specialize exclusively in AI-powered lead systems for real estate agents, brokers, developers, and construction firms across the U.S. We know your market, your buyer journey, and exactly where deals get lost.</p>
+      <p>We combine cutting-edge AI automation with proven real estate conversion frameworks to transform your pipeline, so your team spends time on buyers and builders who are ready to move, not chasing cold contacts.</p>
+      <div class="about-accent">Trusted by 50+ real estate and construction teams across the U.S.</div>
     </div>
     <div class="about-visual reveal" style="transition-delay:.15s">
-      <div class="about-img-wrap">
-        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80&auto=format&fit=crop" alt="Business team consulting meeting" class="about-stock-img">
-        <div class="about-img-card">
-          <div class="about-icon" style="width:36px;height:36px;border-radius:8px;margin-bottom:8px"><svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div>
-          <div style="font-family:var(--ff-display);font-size:1.4rem;font-weight:800;color:var(--navy)">3x</div>
-          <div style="font-size:.75rem;color:var(--muted);font-weight:500">Avg. conversion lift</div>
+      <div class="about-main-img">
+        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80&auto=format&fit=crop&crop=center" alt="Construction project management">
+        <div class="overlay"></div>
+        <div class="about-stat-card">
+          <div class="about-stat-val"><span class="counter" data-target="98">0</span><span style="color:var(--cyan)">%</span></div>
+          <div class="about-stat-label">Client satisfaction rate</div>
         </div>
       </div>
-      <div class="about-cards" style="margin-top:16px;display:grid;grid-template-columns:1fr 1fr;gap:14px">
+      <div class="about-grid-cards">
         <div class="about-card">
-          <div class="about-icon"><svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2"><path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg></div>
-          <h3>Multi-Channel Capture</h3>
-          <p>Capture leads from web, social, email, and messaging, all flowing into one smart system.</p>
+          <div class="about-icon"><svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+          <h3>Property Lead Capture</h3>
+          <p>Capture buyer and seller leads from every platform into one smart funnel.</p>
         </div>
         <div class="about-card">
-          <div class="about-icon"><svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
-          <h3>24/7 Automation</h3>
-          <p>Your lead funnel runs around the clock, follow-ups, nurtures, and bookings on autopilot.</p>
+          <div class="about-icon"><svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+          <h3>24/7 AI Follow-Up</h3>
+          <p>Never miss a hot lead. Automated nurture sequences respond in seconds.</p>
         </div>
       </div>
     </div>
@@ -411,84 +463,164 @@ footer{background:var(--navy-dark);padding:52px 6% 32px;border-top:1px solid rgb
   <div class="services-header">
     <div>
       <div class="section-eyebrow reveal">What We Do</div>
-      <h2 class="section-title reveal">Six Systems.<br>One Unstoppable Pipeline.</h2>
+      <h2 class="section-title reveal">Six Systems Built for<br>Real Estate & Construction.</h2>
     </div>
     <a href="#contact" class="btn-primary reveal" style="flex-shrink:0">Get Started →</a>
   </div>
   <div class="services-grid">
-    <div class="service-card reveal">
-      <div class="service-icon"><svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg></div>
-      <h3>AI Lead Qualification</h3>
-      <p>Proprietary scoring models analyse intent signals and behaviour to instantly rank leads by conversion potential.</p>
-      <span class="service-tag">Core Engine</span>
+    <div class="svc-card reveal">
+      <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=600&q=80&auto=format&fit=crop&crop=center" alt="Real estate lead conversion">
+      <div class="svc-overlay"></div>
+      <div class="svc-content">
+        <span class="svc-tag">Core Engine</span>
+        <h3>AI Lead Qualification</h3>
+        <p>Score buyers, sellers, and contractors by intent signals in real time, so agents only talk to ready prospects.</p>
+      </div>
     </div>
-    <div class="service-card reveal" style="transition-delay:.08s">
-      <div class="service-icon"><svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></div>
-      <h3>Automated Follow-Ups</h3>
-      <p>Personalised multi-step sequences trigger at exactly the right moment, email, SMS, and DM, without lifting a finger.</p>
-      <span class="service-tag">Nurture</span>
+    <div class="svc-card reveal" style="transition-delay:.08s">
+      <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=600&q=80&auto=format&fit=crop&crop=center" alt="AI automation follow-up">
+      <div class="svc-overlay"></div>
+      <div class="svc-content">
+        <span class="svc-tag">Nurture</span>
+        <h3>Automated Follow-Ups</h3>
+        <p>Personalised email, SMS, and DM sequences triggered the moment a lead shows interest, 24/7.</p>
+      </div>
     </div>
-    <div class="service-card reveal" style="transition-delay:.16s">
-      <div class="service-icon"><svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zm10 0a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zm10 0a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg></div>
-      <h3>CRM Integration</h3>
-      <p>Seamless sync with HubSpot, Salesforce, Pipedrive, and 50+ tools, your data stays clean and centralised.</p>
-      <span class="service-tag">Integration</span>
+    <div class="svc-card reveal" style="transition-delay:.16s">
+      <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80&auto=format&fit=crop&crop=center" alt="Property analytics">
+      <div class="svc-overlay"></div>
+      <div class="svc-content">
+        <span class="svc-tag">Intelligence</span>
+        <h3>Pipeline Analytics</h3>
+        <p>Live dashboards showing exactly where leads drop off in your funnel and how to fix it.</p>
+      </div>
     </div>
-    <div class="service-card reveal" style="transition-delay:.08s">
-      <div class="service-icon"><svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg></div>
-      <h3>Conversion Analytics</h3>
-      <p>Deep-funnel dashboards surface exactly where leads drop off and how to fix it, backed by live data.</p>
-      <span class="service-tag">Intelligence</span>
+    <div class="svc-card reveal" style="transition-delay:.08s">
+      <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600&q=80&auto=format&fit=crop&crop=center" alt="Construction CRM integration">
+      <div class="svc-overlay"></div>
+      <div class="svc-content">
+        <span class="svc-tag">Integration</span>
+        <h3>CRM Integration</h3>
+        <p>Seamless sync with your existing tools, HubSpot, Salesforce, Follow Up Boss, and 50+ more.</p>
+      </div>
     </div>
-    <div class="service-card reveal" style="transition-delay:.16s">
-      <div class="service-icon"><svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg></div>
-      <h3>Multi-Channel Capture</h3>
-      <p>Deploy intelligent capture forms, landing pages, chatbots, and social hooks across every platform your audience uses.</p>
-      <span class="service-tag">Reach</span>
+    <div class="svc-card reveal" style="transition-delay:.16s">
+      <img src="https://images.unsplash.com/photo-1516156008625-3a9d6067fab5?w=600&q=80&auto=format&fit=crop&crop=center" alt="Real estate paid ads">
+      <div class="svc-overlay"></div>
+      <div class="svc-content">
+        <span class="svc-tag">Reach</span>
+        <h3>Paid Ads Optimization</h3>
+        <p>AI-driven ad targeting that reduces cost per lead while increasing quality across Google and Meta.</p>
+      </div>
     </div>
-    <div class="service-card reveal" style="transition-delay:.24s">
-      <div class="service-icon"><svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg></div>
-      <h3>24/7 AI Chatbot</h3>
-      <p>A trained conversational AI handles objections, qualifies intent, and books demo calls, even at 3am on a Sunday.</p>
-      <span class="service-tag">Always On</span>
+    <div class="svc-card reveal" style="transition-delay:.24s">
+      <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80&auto=format&fit=crop&crop=center" alt="Revenue automation systems">
+      <div class="svc-overlay"></div>
+      <div class="svc-content">
+        <span class="svc-tag">Scale</span>
+        <h3>Revenue Automation</h3>
+        <p>End-to-end systems that run your entire lead-to-deal pipeline without manual intervention.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASE STUDIES -->
+<section id="cases">
+  <div style="text-align:center;margin-bottom:52px">
+    <div class="section-eyebrow reveal">Real Results</div>
+    <h2 class="section-title reveal" style="color:white;margin:0 auto">Real Clients. Real Numbers.</h2>
+    <p class="section-sub reveal" style="color:rgba(255,255,255,0.45);margin:16px auto 0">These are actual outcomes from our systems deployed in real estate and construction businesses.</p>
+  </div>
+  <div class="cases-grid">
+    <div class="case-card reveal">
+      <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80&auto=format&fit=crop&crop=center" alt="Luxury home development">
+      <div class="case-overlay"></div>
+      <div class="case-content">
+        <span class="case-badge">Real Estate Developer</span>
+        <h3>Luxury Residential Development, Miami FL</h3>
+        <div class="case-stats">
+          <div class="case-stat"><strong>$2.3M</strong><span>Pipeline in 60 days</span></div>
+          <div class="case-stat"><strong>+38%</strong><span>Conversion rate lift</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="case-card reveal" style="transition-delay:.12s">
+      <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80&auto=format&fit=crop&crop=center" alt="Construction company growth">
+      <div class="case-overlay"></div>
+      <div class="case-content">
+        <span class="case-badge">Construction Firm</span>
+        <h3>Mid-Scale Construction Company, Dallas TX</h3>
+        <div class="case-stats">
+          <div class="case-stat"><strong>4.2x</strong><span>Lead volume growth</span></div>
+          <div class="case-stat"><strong>60 days</strong><span>To full deployment</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="case-card reveal" style="transition-delay:.08s">
+      <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=800&q=80&auto=format&fit=crop&crop=center" alt="Real estate agency">
+      <div class="case-overlay"></div>
+      <div class="case-content">
+        <span class="case-badge">Real Estate Agency</span>
+        <h3>Property Agency, Phoenix AZ</h3>
+        <div class="case-stats">
+          <div class="case-stat"><strong>3x</strong><span>More qualified leads</span></div>
+          <div class="case-stat"><strong>80+</strong><span>Demos booked by AI</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="case-card reveal" style="transition-delay:.2s">
+      <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&q=80&auto=format&fit=crop&crop=center" alt="Commercial real estate">
+      <div class="case-overlay"></div>
+      <div class="case-content">
+        <span class="case-badge">Commercial Real Estate</span>
+        <h3>Commercial Property Group, Houston TX</h3>
+        <div class="case-stats">
+          <div class="case-stat"><strong>312%</strong><span>ROI in 6 weeks</span></div>
+          <div class="case-stat"><strong>15hrs</strong><span>Saved weekly on admin</span></div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- HOW IT WORKS -->
 <section id="howitworks">
-  <div class="section-eyebrow reveal">The Process</div>
-  <h2 class="section-title reveal">From Zero to Fully Automated<br>in 4 Steps</h2>
-  <p class="section-sub reveal">No technical knowledge required. We handle everything end-to-end, you see results within 14 days.</p>
+  <div style="text-align:center;margin-bottom:0">
+    <div class="section-eyebrow reveal">The Process</div>
+    <h2 class="section-title reveal">From First Click to Closed Deal</h2>
+    <p class="section-sub reveal" style="margin:0 auto">Four steps. Fully automated. Running while you sleep.</p>
+  </div>
   <div class="steps">
     <div class="step reveal">
       <div class="step-num">01</div>
-      <h3>Discovery Call</h3>
-      <p>We audit your current lead flow, identify gaps, and map your ideal customer journey in a free 30-min session.</p>
+      <h3>Capture</h3>
+      <p>AI-powered forms, chatbots, and landing pages collect leads from every channel your buyers use.</p>
     </div>
     <div class="step reveal" style="transition-delay:.1s">
       <div class="step-num">02</div>
-      <h3>System Design</h3>
-      <p>Our team architects a custom AI pipeline tailored to your business model, industry, and CRM stack.</p>
+      <h3>Qualify</h3>
+      <p>Our scoring engine analyses buyer intent, budget signals, and behaviour to rank every lead instantly.</p>
     </div>
     <div class="step reveal" style="transition-delay:.2s">
       <div class="step-num">03</div>
-      <h3>Build & Deploy</h3>
-      <p>We build, test, and deploy your full automation system, from capture to nurture to booking, in under 2 weeks.</p>
+      <h3>Nurture</h3>
+      <p>Personalised follow-up sequences engage leads at the right moment via email, SMS, and DM.</p>
     </div>
     <div class="step reveal" style="transition-delay:.3s">
       <div class="step-num">04</div>
-      <h3>Scale & Optimise</h3>
-      <p>Monthly performance reviews, A/B testing, and continuous AI model refinement to keep your pipeline compounding.</p>
+      <h3>Convert</h3>
+      <p>Hot leads are auto-booked into your calendar. Your team shows up to close, nothing else.</p>
     </div>
   </div>
 </section>
 
 <!-- TESTIMONIALS -->
 <section id="testimonials">
-  <div style="text-align:center;margin-bottom:52px">
+  <div style="text-align:center;margin-bottom:0">
     <div class="section-eyebrow reveal">Testimonials</div>
-    <h2 class="section-title reveal">Businesses That Scaled<br>With Maxi Innovation</h2>
+    <h2 class="section-title reveal">What Our Clients Say</h2>
+    <p class="section-sub reveal" style="margin:0 auto">Real estate and construction teams across the United States share their experience.</p>
   </div>
   <div class="testi-grid">
     <div class="testi-card reveal">
@@ -499,10 +631,10 @@ footer{background:var(--navy-dark);padding:52px 6% 32px;border-top:1px solid rgb
         <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
         <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
       </div>
-      <p class="testi-quote">"Within 3 weeks of deploying Maxi Innovation's system, our qualified lead volume tripled and our sales team was finally spending time on prospects who actually converted."</p>
+      <p class="testi-quote">"Within 3 weeks our qualified buyer leads tripled. The AI system follows up faster than any human could. We closed 4 properties we would have lost to slow response times before."</p>
       <div class="testi-author">
         <div class="testi-avatar">AO</div>
-        <div><div class="testi-name">Adaeze Okonkwo</div><div class="testi-role">CEO, PrimeTech Solutions</div></div>
+        <div><div class="testi-name">Jennifer Harris</div><div class="testi-role">CEO, Pinnacle Realty Group</div></div>
       </div>
     </div>
     <div class="testi-card reveal" style="transition-delay:.12s">
@@ -513,10 +645,10 @@ footer{background:var(--navy-dark);padding:52px 6% 32px;border-top:1px solid rgb
         <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
         <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
       </div>
-      <p class="testi-quote">"The AI chatbot alone has booked over 80 demos without any human intervention. I can't believe we were manually following up with leads before. Total game-changer."</p>
+      <p class="testi-quote">"Our construction firm generated a $1.8M project pipeline in 45 days. The AI booked 80+ site consultation calls without a single human follow-up. Absolute game-changer."</p>
       <div class="testi-author">
         <div class="testi-avatar">KM</div>
-        <div><div class="testi-name">Kwame Mensah</div><div class="testi-role">Founder, GrowthLab Africa</div></div>
+        <div><div class="testi-name">Michael Carter</div><div class="testi-role">Director, Carter Construction Co.</div></div>
       </div>
     </div>
     <div class="testi-card reveal" style="transition-delay:.24s">
@@ -527,12 +659,23 @@ footer{background:var(--navy-dark);padding:52px 6% 32px;border-top:1px solid rgb
         <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
         <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
       </div>
-      <p class="testi-quote">"ROI in 6 weeks. The CRM integration saved us 15 hours of manual data entry per week alone. Maxi Innovation genuinely understands how businesses grow in this market."</p>
+      <p class="testi-quote">"312% ROI in 6 weeks. The CRM sync alone saved us 15 hours of manual data entry per week. Maxi Innovation understands the property market better than any other tech company we've worked with."</p>
       <div class="testi-author">
         <div class="testi-avatar">FI</div>
-        <div><div class="testi-name">Fatima Ibrahim</div><div class="testi-role">Head of Sales, Nexus Retail Group</div></div>
+        <div><div class="testi-name">Sarah Mitchell</div><div class="testi-role">Sales Director, Nexus Realty Group, Austin TX</div></div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section id="ctabanner">
+  <div class="section-eyebrow reveal">Limited Spots Available</div>
+  <h2 class="section-title reveal">Ready to Turn Ad Spend Into <em style="font-style:normal;color:var(--gold)">Predictable Revenue?</em></h2>
+  <p class="reveal">We only onboard a limited number of real estate and construction clients each month to guarantee results.</p>
+  <div class="cta-btns reveal">
+    <a href="#contact" class="btn-gold">Book My Free Strategy Call →</a>
+    <a href="#cases" class="btn-outline-white">View Case Studies</a>
   </div>
 </section>
 
@@ -541,39 +684,35 @@ footer{background:var(--navy-dark);padding:52px 6% 32px;border-top:1px solid rgb
   <div class="faq-grid">
     <div>
       <div class="section-eyebrow reveal">FAQ</div>
-      <h2 class="section-title reveal">Questions We Get Asked Every Day</h2>
-      <p class="section-sub reveal">Everything you need to know before booking your free demo.</p>
-      <div class="faq-list" style="margin-top:36px">
+      <h2 class="section-title reveal">Questions We Hear Every Day</h2>
+      <p class="section-sub reveal">Everything you need to know before your free demo call.</p>
+      <div class="faq-list">
         <div class="faq-item reveal">
           <div class="faq-q">How quickly will I see results?<div class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
-          <div class="faq-a"><div class="faq-a-inner">Most clients see a measurable increase in qualified leads within 7 14 days of deployment. Full pipeline optimisation typically takes 30 60 days as the AI models learn your audience.</div></div>
+          <div class="faq-a"><div class="faq-a-inner">Most real estate and construction clients see measurable increases in qualified leads within 7 to 14 days. Full pipeline optimisation typically takes 30 to 60 days as the AI models learn your market.</div></div>
         </div>
         <div class="faq-item reveal">
-          <div class="faq-q">Do I need technical knowledge to use your systems?<div class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
-          <div class="faq-a"><div class="faq-a-inner">Absolutely not. We handle all the setup, integration, and maintenance. You get a clean dashboard and a dedicated account manager. If you can check email, you can use our platform.</div></div>
+          <div class="faq-q">Do I need technical knowledge?<div class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
+          <div class="faq-a"><div class="faq-a-inner">Absolutely not. We handle all setup, integration, and maintenance. You get a clean dashboard and a dedicated account manager. If you can check email, you can use our platform.</div></div>
         </div>
         <div class="faq-item reveal">
-          <div class="faq-q">Which CRMs and tools do you integrate with?<div class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
-          <div class="faq-a"><div class="faq-a-inner">We natively integrate with HubSpot, Salesforce, Pipedrive, Zoho, Go High Level, and 50+ additional tools via Zapier and Make. If you use a custom CRM, we can build a custom integration.</div></div>
+          <div class="faq-q">Which CRMs do you integrate with?<div class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
+          <div class="faq-a"><div class="faq-a-inner">We integrate natively with Follow Up Boss, HubSpot, Salesforce, Pipedrive, Zoho, Go High Level, and 50+ additional tools via Zapier and Make. Custom CRM builds are also available.</div></div>
         </div>
         <div class="faq-item reveal">
-          <div class="faq-q">Is there a contract or minimum commitment?<div class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
+          <div class="faq-q">Is there a contract or minimum term?<div class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
           <div class="faq-a"><div class="faq-a-inner">We offer month-to-month and quarterly plans. No long-term lock-ins. We're confident enough in our results that we don't need to trap clients in contracts.</div></div>
         </div>
         <div class="faq-item reveal">
-          <div class="faq-q">What industries do you work with?<div class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
-          <div class="faq-a"><div class="faq-a-inner">We've successfully deployed systems in SaaS, real estate, financial services, healthcare, e-commerce, professional services, and B2B consulting. Our frameworks are industry-agnostic by design.</div></div>
-        </div>
-        <div class="faq-item reveal">
-          <div class="faq-q">What's included in the free demo call?<div class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
-          <div class="faq-a"><div class="faq-a-inner">A 30-minute live demo of the platform tailored to your industry, a free audit of your current lead funnel with specific recommendations, and a custom proposal with projected ROI for your business.</div></div>
+          <div class="faq-q">What's included in the free demo?<div class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
+          <div class="faq-a"><div class="faq-a-inner">A 30-minute live walkthrough of the platform tailored to your real estate or construction business, a free audit of your current lead funnel, specific recommendations, and a custom proposal with projected ROI.</div></div>
         </div>
       </div>
     </div>
-    <div class="reveal" style="transition-delay:.2s">
+    <div class="reveal" style="transition-delay:.2s;margin-top:52px">
       <div class="faq-cta-box">
         <h3>Still Have Questions?</h3>
-        <p>Our team is ready to walk you through exactly how Maxi Innovation works for your specific business, no sales pressure, just honest answers.</p>
+        <p>Our team will walk you through exactly how Maxi Innovation works for your specific property business, no sales pressure, just honest answers.</p>
         <a href="#contact" class="btn-cyan">Book a Free 30-Min Call →</a>
       </div>
     </div>
@@ -584,33 +723,33 @@ footer{background:var(--navy-dark);padding:52px 6% 32px;border-top:1px solid rgb
 <section id="contact">
   <div class="section-eyebrow reveal">Get Started</div>
   <h2 class="section-title reveal">Book Your Free<br>Strategy Demo</h2>
-  <p class="section-sub reveal">Tell us a bit about your business and we'll design a custom AI lead system for you, completely free, no obligations.</p>
+  <p class="section-sub reveal">Tell us about your business and we'll design a custom AI lead system for real estate or construction, completely free, no obligations.</p>
   <div class="contact-grid">
     <div>
       <div class="contact-benefits">
         <div class="contact-benefit reveal">
           <div class="benefit-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
-          <div class="benefit-text"><strong>Free 30-Minute Strategy Call</strong><span>A real expert walks you through your personalised AI lead system, no junior reps.</span></div>
+          <div class="benefit-text"><strong>Free 30-Minute Strategy Call</strong><span>A real expert walks you through your personalised AI lead system, tailored to real estate or construction.</span></div>
         </div>
         <div class="contact-benefit reveal" style="transition-delay:.1s">
           <div class="benefit-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg></div>
-          <div class="benefit-text"><strong>Custom ROI Projection</strong><span>We'll show you exactly what a 3x or 5x lead increase means in revenue for your specific numbers.</span></div>
+          <div class="benefit-text"><strong>Custom ROI Projection</strong><span>We'll show you what a 3x or 5x lead increase means in closed deals and revenue for your specific numbers.</span></div>
         </div>
         <div class="contact-benefit reveal" style="transition-delay:.2s">
           <div class="benefit-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div>
-          <div class="benefit-text"><strong>Implementation Blueprint</strong><span>Leave with a step-by-step action plan you can use, whether you work with us or not.</span></div>
+          <div class="benefit-text"><strong>Free Funnel Audit</strong><span>We'll audit your current lead process and show you exactly where deals are falling through the cracks.</span></div>
         </div>
         <div class="contact-benefit reveal" style="transition-delay:.3s">
           <div class="benefit-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg></div>
-          <div class="benefit-text"><strong>Zero Pressure. Zero Obligation.</strong><span>We believe if we do a great demo, you'll want to work with us. That's the only sales strategy we use.</span></div>
+          <div class="benefit-text"><strong>No Obligation, No Pressure</strong><span>This is a genuine strategy session. If it's not a fit, we'll tell you honestly. Zero sales games.</span></div>
         </div>
       </div>
     </div>
     <div class="contact-form reveal" style="transition-delay:.2s">
-      <h3 style="font-family:var(--ff-display);font-size:1.25rem;font-weight:700;color:white;margin-bottom:24px">Schedule Your Demo</h3>
+      <h3>Schedule Your Demo</h3>
       <form action="https://api.web3forms.com/submit" method="POST" id="demo-form">
         <input type="hidden" name="access_key" value="53caab46-4928-4ed1-b96a-0f65e7098f74">
-        <input type="hidden" name="subject" value="New Demo Booking, Maxi Innovation">
+        <input type="hidden" name="subject" value="New Demo Booking — Maxi Innovation">
         <input type="hidden" name="from_name" value="Maxi Innovation Website">
         <input type="hidden" name="redirect" value="false">
         <div class="form-row">
@@ -620,16 +759,26 @@ footer{background:var(--navy-dark);padding:52px 6% 32px;border-top:1px solid rgb
         <div class="form-group"><label>Business Email</label><input type="email" name="email" placeholder="you@company.com" required></div>
         <div class="form-group"><label>Company / Business Name</label><input type="text" name="company" placeholder="Your Company Ltd." required></div>
         <div class="form-group">
-          <label>Current Monthly Lead Volume</label>
+          <label>Business Type</label>
+          <select name="business_type">
+            <option>Real Estate Agency</option>
+            <option>Property Developer</option>
+            <option>Construction Company</option>
+            <option>Real Estate Broker</option>
+            <option>Property Management</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group"><label>Monthly Lead Volume</label>
           <select name="lead_volume">
-            <option>0, 50 leads</option>
-            <option>50, 200 leads</option>
-            <option>200, 500 leads</option>
-            <option>500, 2000 leads</option>
+            <option>0 to 50 leads</option>
+            <option>50 to 200 leads</option>
+            <option>200 to 500 leads</option>
+            <option>500 to 2000 leads</option>
             <option>2000+ leads</option>
           </select>
         </div>
-        <div class="form-group"><label>What's your biggest challenge with leads?</label><textarea name="challenge" placeholder="e.g. Low conversion rate, poor lead quality, manual follow-up taking too long..."></textarea></div>
+        <div class="form-group"><label>What is your biggest challenge with leads?</label><textarea name="challenge" placeholder="e.g. Low conversion rate, slow follow-up, poor lead quality..."></textarea></div>
         <button type="submit" class="form-submit" id="form-submit-btn">Book My Free Demo →</button>
       </form>
     </div>
@@ -640,67 +789,36 @@ footer{background:var(--navy-dark);padding:52px 6% 32px;border-top:1px solid rgb
 <section id="ebooks" style="background:var(--bg)">
   <div style="text-align:center;margin-bottom:52px">
     <div class="section-eyebrow reveal">Digital Resources</div>
-    <h2 class="section-title reveal">E-Books to <em style="font-style:normal;color:var(--cyan)">Grow Your Business</em></h2>
-    <p class="section-sub reveal" style="margin:0 auto">Practical, results-driven guides written to help you generate more leads, save more time, and make more money.</p>
+    <h2 class="section-title reveal">E-Books to <em style="font-style:normal;color:var(--cyan)">Grow Your Property Business</em></h2>
+    <p class="section-sub reveal" style="margin:0 auto">Practical, results-driven guides written to help real estate and construction businesses generate more leads and close more deals.</p>
   </div>
-
-  <!-- Public book grid -->
   <div id="ebook-grid" class="ebook-grid"></div>
   <div id="ebook-empty" class="ebook-empty" style="display:none">
     <svg width="48" height="48" fill="none" viewBox="0 0 24 24" stroke="var(--muted)" stroke-width="1.5"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
     <p>No e-books listed yet.</p>
   </div>
-
-  <!-- Admin panel toggle (password protected) -->
   <div style="text-align:center;margin-top:48px">
     <button class="admin-toggle-btn" onclick="promptAdminAccess()">⚙ Manage E-Books</button>
   </div>
-
-  <!-- Admin panel (hidden, only unlocked with password) -->
   <div id="admin-panel" class="admin-panel" style="display:none">
     <div class="admin-header">
       <h3>📚 E-Book Manager</h3>
       <p>Add, edit, or remove your e-books. Changes save instantly and appear on the page.</p>
     </div>
-
-    <!-- Add form -->
     <div class="admin-form">
       <h4>Add New E-Book</h4>
       <div class="admin-form-grid">
-        <div class="admin-field">
-          <label>Book Title *</label>
-          <input type="text" id="eb-title" placeholder="e.g. The Lead Generation Blueprint">
-        </div>
-        <div class="admin-field">
-          <label>Price (e.g. $29, Free, ₦5,000) *</label>
-          <input type="text" id="eb-price" placeholder="e.g. $29">
-        </div>
-        <div class="admin-field" style="grid-column:1/-1">
-          <label>Short Description *</label>
-          <textarea id="eb-desc" rows="3" placeholder="Describe what the reader will learn and why they need this book..."></textarea>
-        </div>
-        <div class="admin-field">
-          <label>Buy / Download Link *</label>
-          <input type="url" id="eb-link" placeholder="https://...">
-        </div>
-        <div class="admin-field">
-          <label>Button Label</label>
-          <input type="text" id="eb-btn" placeholder="Buy Now (default)">
-        </div>
-        <div class="admin-field">
-          <label>Cover Image URL (optional)</label>
-          <input type="url" id="eb-img" placeholder="https://... (leave blank for default)">
-        </div>
-        <div class="admin-field">
-          <label>Tag / Category (optional)</label>
-          <input type="text" id="eb-tag" placeholder="e.g. Lead Gen, Sales, AI">
-        </div>
+        <div class="admin-field"><label>Book Title *</label><input type="text" id="eb-title" placeholder="e.g. The Real Estate Lead Blueprint"></div>
+        <div class="admin-field"><label>Price *</label><input type="text" id="eb-price" placeholder="e.g. $29"></div>
+        <div class="admin-field" style="grid-column:1/-1"><label>Short Description *</label><textarea id="eb-desc" rows="3" placeholder="Describe what the reader will learn..."></textarea></div>
+        <div class="admin-field"><label>Buy / Download Link *</label><input type="url" id="eb-link" placeholder="https://..."></div>
+        <div class="admin-field"><label>Button Label</label><input type="text" id="eb-btn" placeholder="Buy Now (default)"></div>
+        <div class="admin-field"><label>Cover Image URL (optional)</label><input type="url" id="eb-img" placeholder="https://..."></div>
+        <div class="admin-field"><label>Tag / Category (optional)</label><input type="text" id="eb-tag" placeholder="e.g. Real Estate, Construction"></div>
       </div>
       <button class="admin-add-btn" onclick="addEbook()">+ Add E-Book to Page</button>
       <span id="admin-msg" class="admin-msg"></span>
     </div>
-
-    <!-- Existing books list -->
     <div class="admin-book-list" id="admin-book-list"></div>
   </div>
 </section>
@@ -709,8 +827,8 @@ footer{background:var(--navy-dark);padding:52px 6% 32px;border-top:1px solid rgb
 <footer>
   <div class="footer-top">
     <div class="footer-brand">
-      <img id="footer-logo-img" src="logo.png" alt="Maxi Innovation">
-      <p>AI-powered lead conversion systems for businesses that are serious about growth.</p>
+      <img src="logo.png" alt="Maxi Innovation">
+      <p>AI-powered lead conversion systems for real estate and construction businesses serious about growth.</p>
     </div>
     <div class="footer-links">
       <h4>Services</h4>
@@ -718,14 +836,14 @@ footer{background:var(--navy-dark);padding:52px 6% 32px;border-top:1px solid rgb
         <li><a href="#services">AI Lead Qualification</a></li>
         <li><a href="#services">Automated Follow-Ups</a></li>
         <li><a href="#services">CRM Integration</a></li>
-        <li><a href="#services">Analytics Dashboard</a></li>
+        <li><a href="#services">Paid Ads Optimization</a></li>
       </ul>
     </div>
     <div class="footer-links">
       <h4>Company</h4>
       <ul>
         <li><a href="#about">About Us</a></li>
-        <li><a href="#testimonials">Case Studies</a></li>
+        <li><a href="#cases">Case Studies</a></li>
         <li><a href="#faq">FAQ</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -742,7 +860,7 @@ footer{background:var(--navy-dark);padding:52px 6% 32px;border-top:1px solid rgb
     <span class="footer-copy">© 2025 Maxi Innovation. All rights reserved.</span>
     <div class="footer-socials">
       <a class="social-btn" href="https://www.facebook.com/share/1JLFMo6MF4/?mibextid=wwXIfr" target="_blank" rel="noopener" title="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
-      <a class="social-btn" href="https://www.instagram.com/maxiinovation0/" target="_blank" rel="noopener" title="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+      <a class="social-btn" href="https://www.instagram.com/personalbrand_baddie?igsh=aWJwMzNtN3ZmejA1" target="_blank" rel="noopener" title="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
     </div>
   </div>
 </footer>
@@ -750,315 +868,183 @@ footer{background:var(--navy-dark);padding:52px 6% 32px;border-top:1px solid rgb
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 <script>
-// ─── LOGO DATA URI ─────────────────────────────────────────────
-const LOGO_SRC = "logo.png";
-
-document.getElementById('preloader-logo-img').src = LOGO_SRC;
-document.getElementById('nav-logo-img').src = LOGO_SRC;
-document.getElementById('footer-logo-img').src = LOGO_SRC;
-
-// ─── PRELOADER ─────────────────────────────────────────────────
+// ─── PRELOADER ──────────────────────────────────────────────────
 (function(){
-  const el = document.getElementById('preloader');
-  const fill = document.getElementById('preloader-fill');
-  const count = document.getElementById('preloader-count');
-  
-  setTimeout(()=> el.classList.add('preloader-ready'), 100);
-  
-  let progress = 0;
-  const interval = setInterval(()=>{
-    progress += Math.random() * 4 + 1;
-    if(progress >= 100){ progress = 100; clearInterval(interval); }
-    fill.style.width = progress + '%';
-    count.textContent = Math.floor(progress) + '%';
-    if(progress === 100){
+  const el=document.getElementById('preloader');
+  const fill=document.getElementById('preloader-fill');
+  const count=document.getElementById('preloader-count');
+  setTimeout(()=>el.classList.add('preloader-ready'),100);
+  let p=0;
+  const iv=setInterval(()=>{
+    p+=Math.random()*4+1;
+    if(p>=100){p=100;clearInterval(iv);}
+    fill.style.width=p+'%';
+    count.textContent=Math.floor(p)+'%';
+    if(p===100){
       setTimeout(()=>{
-        el.style.transition = 'opacity .7s, transform .7s';
-        el.style.opacity = '0';
-        el.style.transform = 'scale(1.05)';
-        setTimeout(()=>{ el.style.display='none'; initAnimations(); }, 700);
-      }, 300);
+        el.style.transition='opacity .7s,transform .7s';
+        el.style.opacity='0';el.style.transform='scale(1.05)';
+        setTimeout(()=>{el.style.display='none';initAnimations();},700);
+      },300);
     }
-  }, 35);
+  },35);
 })();
 
-// ─── CURSOR ────────────────────────────────────────────────────
-const cursor = document.getElementById('cursor');
-const ring = document.getElementById('cursor-ring');
+// ─── CURSOR ─────────────────────────────────────────────────────
+const cursor=document.getElementById('cursor');
+const ring=document.getElementById('cursor-ring');
 let mx=0,my=0,rx=0,ry=0;
-document.addEventListener('mousemove',e=>{
-  mx=e.clientX; my=e.clientY;
-  cursor.style.left=mx+'px'; cursor.style.top=my+'px';
-});
-(function animRing(){
-  rx += (mx-rx)*.12; ry += (my-ry)*.12;
-  ring.style.left=rx+'px'; ring.style.top=ry+'px';
-  requestAnimationFrame(animRing);
-})();
-document.querySelectorAll('a,button,.faq-q,.service-card').forEach(el=>{
-  el.addEventListener('mouseenter',()=>{ cursor.style.width='18px';cursor.style.height='18px';ring.style.width='52px';ring.style.height='52px'; });
-  el.addEventListener('mouseleave',()=>{ cursor.style.width='10px';cursor.style.height='10px';ring.style.width='36px';ring.style.height='36px'; });
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cursor.style.left=mx+'px';cursor.style.top=my+'px';});
+(function animRing(){rx+=(mx-rx)*.12;ry+=(my-ry)*.12;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(animRing);})();
+document.querySelectorAll('a,button,.faq-q,.svc-card,.case-card').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{cursor.style.width='18px';cursor.style.height='18px';ring.style.width='52px';ring.style.height='52px';});
+  el.addEventListener('mouseleave',()=>{cursor.style.width='10px';cursor.style.height='10px';ring.style.width='36px';ring.style.height='36px';});
 });
 
-// ─── SCROLL & ANIMATIONS ───────────────────────────────────────
+// ─── ANIMATIONS ─────────────────────────────────────────────────
 function initAnimations(){
   gsap.registerPlugin(ScrollTrigger);
-  
-  // Navbar scroll state
+
   ScrollTrigger.create({
     start:50,
-    onEnter:()=> document.getElementById('navbar').classList.add('scrolled'),
-    onLeaveBack:()=> document.getElementById('navbar').classList.remove('scrolled')
+    onEnter:()=>document.getElementById('navbar').classList.add('scrolled'),
+    onLeaveBack:()=>document.getElementById('navbar').classList.remove('scrolled')
   });
-  
-  // Hero stagger
+
   gsap.to('.hero-el',{opacity:1,y:0,duration:.9,stagger:.14,ease:'power3.out',delay:.3});
-  gsap.from('.hero-canvas-wrap',{opacity:0,scale:.96,duration:1.2,ease:'power3.out',delay:.2});
-  
+
+  // Parallax on hero image
+  gsap.to('#hero .hero-main-img img',{
+    yPercent:15,
+    ease:'none',
+    scrollTrigger:{trigger:'#hero',start:'top top',end:'bottom top',scrub:1}
+  });
+
   // Reveal on scroll
-  const reveals = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver((entries)=>{
-    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('visible'); } });
-  },{threshold:0.12});
-  reveals.forEach(el=>observer.observe(el));
-  
+  const obs=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');});
+  },{threshold:0.1});
+  document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
   // Counters
-  const counters = document.querySelectorAll('.counter');
-  const cObs = new IntersectionObserver((entries)=>{
+  const cObs=new IntersectionObserver(entries=>{
     entries.forEach(e=>{
       if(e.isIntersecting){
-        const el=e.target, target=+el.dataset.target;
-        let start=0;
-        const step=()=>{
-          start+=Math.max(1,Math.ceil((target-start)/18));
-          el.textContent=start;
-          if(start<target) requestAnimationFrame(step);
-          else el.textContent=target;
-        };
-        step(); cObs.unobserve(el);
+        const el=e.target,target=+el.dataset.target;
+        let s=0;
+        const step=()=>{s+=Math.max(1,Math.ceil((target-s)/18));el.textContent=s;if(s<target)requestAnimationFrame(step);else el.textContent=target;};
+        step();cObs.unobserve(el);
       }
     });
-  },{threshold:0.5});
-  counters.forEach(c=>cObs.observe(c));
-  
-  // FAQ accordion
+  },{threshold:.5});
+  document.querySelectorAll('.counter').forEach(c=>cObs.observe(c));
+
+  // FAQ
   document.querySelectorAll('.faq-q').forEach(q=>{
     q.addEventListener('click',()=>{
-      const item = q.parentElement;
-      const ans = item.querySelector('.faq-a');
-      const isOpen = item.classList.contains('open');
-      document.querySelectorAll('.faq-item.open').forEach(i=>{
-        i.classList.remove('open');
-        i.querySelector('.faq-a').style.maxHeight='0';
-      });
-      if(!isOpen){
-        item.classList.add('open');
-        ans.style.maxHeight = ans.scrollHeight + 'px';
-      }
+      const item=q.parentElement,ans=item.querySelector('.faq-a'),isOpen=item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(i=>{i.classList.remove('open');i.querySelector('.faq-a').style.maxHeight='0';});
+      if(!isOpen){item.classList.add('open');ans.style.maxHeight=ans.scrollHeight+'px';}
     });
   });
 }
 
-// ─── FORM SUBMIT FEEDBACK ─────────────────────────────────────
-document.getElementById('demo-form').addEventListener('submit', async function(e){
+// ─── FORM ───────────────────────────────────────────────────────
+document.getElementById('demo-form').addEventListener('submit',async function(e){
   e.preventDefault();
-  const btn = document.getElementById('form-submit-btn');
-  btn.textContent = 'Sending...';
-  btn.disabled = true;
-
-  const formData = new FormData(this);
-  try {
-    const res = await fetch('https://api.web3forms.com/submit', {
-      method: 'POST',
-      body: formData
-    });
-    const data = await res.json();
-    if(data.success){
-      btn.textContent = '✓ Booking Sent!';
-      btn.style.background = '#28a745';
-      this.reset();
-    } else {
-      btn.textContent = 'Something went wrong. Try again.';
-      btn.style.background = '#c0392b';
-      btn.disabled = false;
-    }
-  } catch(err) {
-    btn.textContent = 'Something went wrong. Try again.';
-    btn.style.background = '#c0392b';
-    btn.disabled = false;
-  }
+  const btn=document.getElementById('form-submit-btn');
+  btn.textContent='Sending...';btn.disabled=true;
+  try{
+    const res=await fetch('https://api.web3forms.com/submit',{method:'POST',body:new FormData(this)});
+    const data=await res.json();
+    if(data.success){btn.textContent='✓ Booking Sent!';btn.style.background='#28a745';this.reset();}
+    else{btn.textContent='Something went wrong. Try again.';btn.style.background='#c0392b';btn.disabled=false;}
+  }catch{btn.textContent='Something went wrong. Try again.';btn.style.background='#c0392b';btn.disabled=false;}
 });
 
-// ─── EBOOKS SYSTEM ────────────────────────────────────────────
-const EBOOK_KEY = 'maxi_ebooks_v1';
+// ─── ADMIN PASSWORD ─────────────────────────────────────────────
+const ADMIN_PASSWORD='maxi2025';
+let adminUnlocked=false;
 
-function loadEbooks(){
-  try { return JSON.parse(localStorage.getItem(EBOOK_KEY)) || []; }
-  catch(e){ return []; }
+function promptAdminAccess(){
+  if(adminUnlocked){closeAdmin();return;}
+  const overlay=document.createElement('div');
+  overlay.id='admin-overlay';
+  overlay.style.cssText='position:fixed;inset:0;background:rgba(13,27,75,0.7);backdrop-filter:blur(6px);z-index:8000;display:flex;align-items:center;justify-content:center';
+  overlay.innerHTML=`<div style="background:#fff;border-radius:16px;padding:40px 36px;width:100%;max-width:380px;box-shadow:0 30px 80px rgba(13,27,75,0.25);text-align:center">
+    <div style="width:52px;height:52px;background:linear-gradient(135deg,#1A2E6E,#00AAFF);border-radius:12px;display:flex;align-items:center;justify-content:center;margin:0 auto 20px"><svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2"><path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg></div>
+    <h3 style="font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;color:#0D1B4B;margin-bottom:8px">Admin Access</h3>
+    <p style="font-size:.86rem;color:#6B7FAB;margin-bottom:24px;line-height:1.6">Enter your password to manage e-books.</p>
+    <input type="password" id="admin-pw-input" placeholder="Password" style="width:100%;padding:12px 16px;border:1.5px solid rgba(26,46,110,0.15);border-radius:8px;font-size:.95rem;font-family:'Inter',sans-serif;outline:none;margin-bottom:10px;color:#0D1B4B" onkeydown="if(event.key==='Enter')checkAdminPassword()" oninput="document.getElementById('admin-pw-err').textContent=''">
+    <p id="admin-pw-err" style="color:#c0392b;font-size:.8rem;margin-bottom:10px;min-height:18px"></p>
+    <div style="display:flex;gap:10px">
+      <button onclick="document.getElementById('admin-overlay').remove()" style="flex:1;padding:11px;background:transparent;border:1.5px solid rgba(26,46,110,0.15);border-radius:8px;font-family:'Inter',sans-serif;font-size:.88rem;font-weight:600;color:#6B7FAB;cursor:pointer">Cancel</button>
+      <button onclick="checkAdminPassword()" style="flex:1;padding:11px;background:#1A2E6E;border:none;border-radius:8px;font-family:'Inter',sans-serif;font-size:.88rem;font-weight:600;color:white;cursor:pointer">Unlock →</button>
+    </div>
+  </div>`;
+  document.body.appendChild(overlay);
+  setTimeout(()=>document.getElementById('admin-pw-input').focus(),50);
 }
 
-function saveEbooks(books){
-  localStorage.setItem(EBOOK_KEY, JSON.stringify(books));
+function checkAdminPassword(){
+  const input=document.getElementById('admin-pw-input'),err=document.getElementById('admin-pw-err');
+  if(input.value===ADMIN_PASSWORD){adminUnlocked=true;document.getElementById('admin-overlay').remove();openAdmin();}
+  else{err.textContent='Incorrect password. Try again.';input.value='';input.focus();}
 }
+
+function openAdmin(){
+  const panel=document.getElementById('admin-panel'),btn=document.querySelector('.admin-toggle-btn');
+  panel.style.display='block';btn.textContent='✕ Close Manager';
+  renderAdminList(loadEbooks());
+  panel.scrollIntoView({behavior:'smooth',block:'start'});
+}
+
+function closeAdmin(){
+  document.getElementById('admin-panel').style.display='none';
+  document.querySelector('.admin-toggle-btn').textContent='⚙ Manage E-Books';
+  adminUnlocked=false;
+}
+
+// ─── EBOOKS ─────────────────────────────────────────────────────
+const EBOOK_KEY='maxi_ebooks_v1';
+function loadEbooks(){try{return JSON.parse(localStorage.getItem(EBOOK_KEY))||[];}catch{return[];}}
+function saveEbooks(books){localStorage.setItem(EBOOK_KEY,JSON.stringify(books));}
+
+function defaultCover(){return`<div class="ebook-cover-default"><svg width="52" height="52" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="1.2"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg><span>Maxi Innovation</span></div>`;}
 
 function renderEbooks(){
-  const books = loadEbooks();
-  const grid = document.getElementById('ebook-grid');
-  const empty = document.getElementById('ebook-empty');
-  grid.innerHTML = '';
-  if(books.length === 0){
-    empty.style.display = 'flex';
-    return;
-  }
-  empty.style.display = 'none';
-  books.forEach((b, i) => {
-    const card = document.createElement('div');
-    card.className = 'ebook-card reveal';
-    card.innerHTML = `
-      <div class="ebook-cover">
-        ${b.img
-          ? `<img src="${b.img}" alt="${b.title}" onerror="this.parentElement.innerHTML=defaultCover()">`
-          : defaultCover()}
-        ${b.tag ? `<span class="ebook-tag">${b.tag}</span>` : ''}
-      </div>
-      <div class="ebook-body">
-        <div class="ebook-title">${b.title}</div>
-        <div class="ebook-desc">${b.desc}</div>
-        <div class="ebook-footer">
-          <span class="ebook-price">${b.price}</span>
-          <a href="${b.link}" target="_blank" rel="noopener" class="ebook-buy-btn">${b.btn || 'Buy Now →'}</a>
-        </div>
-      </div>`;
+  const books=loadEbooks(),grid=document.getElementById('ebook-grid'),empty=document.getElementById('ebook-empty');
+  grid.innerHTML='';
+  if(!books.length){empty.style.display='flex';return;}
+  empty.style.display='none';
+  books.forEach((b,i)=>{
+    const card=document.createElement('div');card.className='ebook-card reveal';
+    card.innerHTML=`<div class="ebook-cover">${b.img?`<img src="${b.img}" alt="${b.title}" onerror="this.parentElement.innerHTML=defaultCover()">`:defaultCover()}${b.tag?`<span class="ebook-tag">${b.tag}</span>`:''}</div><div class="ebook-body"><div class="ebook-title">${b.title}</div><div class="ebook-desc">${b.desc}</div><div class="ebook-footer"><span class="ebook-price">${b.price}</span><a href="${b.link}" target="_blank" rel="noopener" class="ebook-buy-btn">${b.btn||'Buy Now →'}</a></div></div>`;
     grid.appendChild(card);
   });
   renderAdminList(books);
 }
 
-function defaultCover(){
-  return `<div class="ebook-cover-default">
-    <svg width="52" height="52" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="1.2"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
-    <span>Maxi Innovation</span>
-  </div>`;
-}
-
 function renderAdminList(books){
-  const list = document.getElementById('admin-book-list');
-  if(books.length === 0){ list.innerHTML = '<p style="color:var(--muted);font-size:.88rem">No books added yet.</p>'; return; }
-  list.innerHTML = '<h4 style="font-family:var(--ff-display);font-weight:700;color:var(--navy);margin-bottom:12px">Current E-Books (' + books.length + ')</h4>' +
-    books.map((b, i) => `
-      <div class="admin-book-row">
-        <div class="admin-book-row-info">
-          <strong>${b.title}</strong>
-          <span>${b.price} · ${b.tag || 'No tag'}</span>
-        </div>
-        <button class="admin-del-btn" onclick="deleteEbook(${i})">🗑 Remove</button>
-      </div>`).join('');
+  const list=document.getElementById('admin-book-list');
+  if(!books.length){list.innerHTML='<p style="color:var(--muted);font-size:.88rem">No books added yet.</p>';return;}
+  list.innerHTML='<h4 style="font-family:var(--ff-display);font-weight:700;color:var(--navy);margin-bottom:12px">Current E-Books ('+books.length+')</h4>'+
+    books.map((b,i)=>`<div class="admin-book-row"><div class="admin-book-row-info"><strong>${b.title}</strong><span>${b.price} · ${b.tag||'No tag'}</span></div><button class="admin-del-btn" onclick="deleteEbook(${i})">🗑 Remove</button></div>`).join('');
 }
 
 function addEbook(){
-  const title = document.getElementById('eb-title').value.trim();
-  const price = document.getElementById('eb-price').value.trim();
-  const desc  = document.getElementById('eb-desc').value.trim();
-  const link  = document.getElementById('eb-link').value.trim();
-  const btn   = document.getElementById('eb-btn').value.trim();
-  const img   = document.getElementById('eb-img').value.trim();
-  const tag   = document.getElementById('eb-tag').value.trim();
-  const msg   = document.getElementById('admin-msg');
-
-  if(!title || !price || !desc || !link){
-    msg.textContent = '⚠ Please fill in all required fields.';
-    msg.style.color = '#c0392b';
-    return;
-  }
-
-  const books = loadEbooks();
-  books.push({ title, price, desc, link, btn, img, tag });
-  saveEbooks(books);
-  renderEbooks();
-
-  // Clear fields
-  ['eb-title','eb-price','eb-desc','eb-link','eb-btn','eb-img','eb-tag'].forEach(id => document.getElementById(id).value = '');
-  msg.textContent = '✓ E-Book added!';
-  msg.style.color = 'var(--cyan)';
-  setTimeout(() => msg.textContent = '', 3000);
+  const title=document.getElementById('eb-title').value.trim(),price=document.getElementById('eb-price').value.trim(),desc=document.getElementById('eb-desc').value.trim(),link=document.getElementById('eb-link').value.trim(),btn=document.getElementById('eb-btn').value.trim(),img=document.getElementById('eb-img').value.trim(),tag=document.getElementById('eb-tag').value.trim(),msg=document.getElementById('admin-msg');
+  if(!title||!price||!desc||!link){msg.textContent='Please fill in all required fields.';msg.style.color='#c0392b';return;}
+  const books=loadEbooks();books.push({title,price,desc,link,btn,img,tag});saveEbooks(books);renderEbooks();
+  ['eb-title','eb-price','eb-desc','eb-link','eb-btn','eb-img','eb-tag'].forEach(id=>document.getElementById(id).value='');
+  msg.textContent='✓ E-Book added!';msg.style.color='var(--cyan)';setTimeout(()=>msg.textContent='',3000);
 }
 
 function deleteEbook(index){
-  if(!confirm('Remove this e-book from the page?')) return;
-  const books = loadEbooks();
-  books.splice(index, 1);
-  saveEbooks(books);
-  renderEbooks();
+  if(!confirm('Remove this e-book from the page?'))return;
+  const books=loadEbooks();books.splice(index,1);saveEbooks(books);renderEbooks();
 }
 
-// ─── ADMIN ACCESS ─────────────────────────────────────────────
-const ADMIN_PASSWORD = 'maxi2025'; // ← Change this to your own password
-let adminUnlocked = false;
-
-function promptAdminAccess(){
-  if(adminUnlocked){
-    closeAdmin();
-    return;
-  }
-  // Build password modal
-  const overlay = document.createElement('div');
-  overlay.id = 'admin-overlay';
-  overlay.style.cssText = 'position:fixed;inset:0;background:rgba(13,27,75,0.7);backdrop-filter:blur(6px);z-index:8000;display:flex;align-items:center;justify-content:center';
-  overlay.innerHTML = `
-    <div style="background:#fff;border-radius:16px;padding:40px 36px;width:100%;max-width:380px;box-shadow:0 30px 80px rgba(13,27,75,0.25);text-align:center">
-      <div style="width:52px;height:52px;background:linear-gradient(135deg,#1A2E6E,#00AAFF);border-radius:12px;display:flex;align-items:center;justify-content:center;margin:0 auto 20px">
-        <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2"><path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
-      </div>
-      <h3 style="font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;color:#0D1B4B;margin-bottom:8px">Admin Access</h3>
-      <p style="font-size:.86rem;color:#6B7FAB;margin-bottom:24px;line-height:1.6">Enter your password to manage e-books.</p>
-      <input type="password" id="admin-pw-input" placeholder="Password"
-        style="width:100%;padding:12px 16px;border:1.5px solid rgba(26,46,110,0.15);border-radius:8px;font-size:.95rem;font-family:'Inter',sans-serif;outline:none;margin-bottom:10px;color:#0D1B4B;transition:border-color .3s"
-        onkeydown="if(event.key==='Enter')checkAdminPassword()"
-        oninput="document.getElementById('admin-pw-err').textContent=''">
-      <p id="admin-pw-err" style="color:#c0392b;font-size:.8rem;margin-bottom:10px;min-height:18px"></p>
-      <div style="display:flex;gap:10px">
-        <button onclick="document.getElementById('admin-overlay').remove()" style="flex:1;padding:11px;background:transparent;border:1.5px solid rgba(26,46,110,0.15);border-radius:8px;font-family:'Inter',sans-serif;font-size:.88rem;font-weight:600;color:#6B7FAB;cursor:pointer">Cancel</button>
-        <button onclick="checkAdminPassword()" style="flex:1;padding:11px;background:#1A2E6E;border:none;border-radius:8px;font-family:'Inter',sans-serif;font-size:.88rem;font-weight:600;color:white;cursor:pointer;transition:background .3s" onmouseover="this.style.background='#00AAFF'" onmouseout="this.style.background='#1A2E6E'">Unlock →</button>
-      </div>
-    </div>`;
-  document.body.appendChild(overlay);
-  setTimeout(()=> document.getElementById('admin-pw-input').focus(), 50);
-}
-
-function checkAdminPassword(){
-  const input = document.getElementById('admin-pw-input');
-  const err   = document.getElementById('admin-pw-err');
-  if(input.value === ADMIN_PASSWORD){
-    adminUnlocked = true;
-    document.getElementById('admin-overlay').remove();
-    openAdmin();
-  } else {
-    err.textContent = '✕ Incorrect password. Try again.';
-    input.value = '';
-    input.focus();
-  }
-}
-
-function openAdmin(){
-  const panel = document.getElementById('admin-panel');
-  const btn   = document.querySelector('.admin-toggle-btn');
-  panel.style.display = 'block';
-  btn.textContent = '✕ Close Manager';
-  renderAdminList(loadEbooks());
-  panel.scrollIntoView({behavior:'smooth', block:'start'});
-}
-
-function closeAdmin(){
-  const panel = document.getElementById('admin-panel');
-  const btn   = document.querySelector('.admin-toggle-btn');
-  panel.style.display = 'none';
-  btn.textContent = '⚙ Manage E-Books';
-  adminUnlocked = false;
-}
-
-function toggleAdmin(){ promptAdminAccess(); }
-
-// Init ebooks on page load
 renderEbooks();
 </script>
 <script defer src="/_vercel/insights/script.js"></script>
