@@ -355,7 +355,7 @@ footer{background:var(--navy-dark);padding:52px 6% 32px;border-top:1px solid rgb
     <li><a href="#about">About</a></li>
     <li><a href="#services">Services</a></li>
     <li><a href="#cases">Results</a></li>
-    <li><a href="#ebooks">E-Books</a></li>
+    <li><a href="#ebooks">AI Books</a></li>
     <li><a href="#faq">FAQ</a></li>
   </ul>
   <a href="#contact" class="btn-nav">Book a Free Demo</a>
@@ -410,7 +410,7 @@ footer{background:var(--navy-dark);padding:52px 6% 32px;border-top:1px solid rgb
     <div class="trust-label">Average Client ROI</div>
   </div>
   <div class="trust-item reveal" style="transition-delay:.08s">
-    <div class="trust-num">$<span class="counter" data-target="50">0</span><span>M+</span></div>
+    <div class="trust-num"><span>$</span><span class="counter" data-target="50">0</span><span>M+</span></div>
     <div class="trust-label">Pipeline Generated</div>
   </div>
   <div class="trust-item reveal" style="transition-delay:.16s">
@@ -789,7 +789,7 @@ footer{background:var(--navy-dark);padding:52px 6% 32px;border-top:1px solid rgb
 <section id="ebooks" style="background:var(--bg)">
   <div style="text-align:center;margin-bottom:52px">
     <div class="section-eyebrow reveal">Digital Resources</div>
-    <h2 class="section-title reveal">E-Books to <em style="font-style:normal;color:var(--cyan)">Grow Your Property Business</em></h2>
+    <h2 class="section-title reveal">AI Books to <em style="font-style:normal;color:var(--cyan)">Grow Your Property Business</em></h2>
     <p class="section-sub reveal" style="margin:0 auto">Practical, results-driven guides written to help real estate and construction businesses generate more leads and close more deals.</p>
   </div>
   <div id="ebook-grid" class="ebook-grid"></div>
@@ -798,15 +798,15 @@ footer{background:var(--navy-dark);padding:52px 6% 32px;border-top:1px solid rgb
     <p>No e-books listed yet.</p>
   </div>
   <div style="text-align:center;margin-top:48px">
-    <button class="admin-toggle-btn" onclick="promptAdminAccess()">⚙ Manage E-Books</button>
+    <button class="admin-toggle-btn" onclick="promptAdminAccess()">⚙ Manage AI Books</button>
   </div>
   <div id="admin-panel" class="admin-panel" style="display:none">
     <div class="admin-header">
-      <h3>📚 E-Book Manager</h3>
-      <p>Add, edit, or remove your e-books. Changes save instantly and appear on the page.</p>
+      <h3>📚 AI Book Manager</h3>
+      <p>Add, edit, or remove your AI books. Changes save instantly and appear on the page.</p>
     </div>
     <div class="admin-form">
-      <h4>Add New E-Book</h4>
+      <h4>Add New AI Book</h4>
       <div class="admin-form-grid">
         <div class="admin-field"><label>Book Title *</label><input type="text" id="eb-title" placeholder="e.g. The Real Estate Lead Blueprint"></div>
         <div class="admin-field"><label>Price *</label><input type="text" id="eb-price" placeholder="e.g. $29"></div>
@@ -816,7 +816,7 @@ footer{background:var(--navy-dark);padding:52px 6% 32px;border-top:1px solid rgb
         <div class="admin-field"><label>Cover Image URL (optional)</label><input type="url" id="eb-img" placeholder="https://..."></div>
         <div class="admin-field"><label>Tag / Category (optional)</label><input type="text" id="eb-tag" placeholder="e.g. Real Estate, Construction"></div>
       </div>
-      <button class="admin-add-btn" onclick="addEbook()">+ Add E-Book to Page</button>
+      <button class="admin-add-btn" onclick="addEbook()">+ Add AI Book to Page</button>
       <span id="admin-msg" class="admin-msg"></span>
     </div>
     <div class="admin-book-list" id="admin-book-list"></div>
@@ -859,7 +859,7 @@ footer{background:var(--navy-dark);padding:52px 6% 32px;border-top:1px solid rgb
   <div class="footer-bottom">
     <span class="footer-copy">© 2025 Maxi Innovation. All rights reserved.</span>
     <div class="footer-socials">
-      <a class="social-btn" href="https://www.facebook.com/share/1JLFMo6MF4/?mibextid=wwXIfr" target="_blank" rel="noopener" title="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+      <a class="social-btn" href="https://www.instagram.com/maxiinovation0/" target="_blank" rel="noopener" title="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
       <a class="social-btn" href="https://www.instagram.com/personalbrand_baddie?igsh=aWJwMzNtN3ZmejA1" target="_blank" rel="noopener" title="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
     </div>
   </div>
@@ -974,7 +974,7 @@ function promptAdminAccess(){
   overlay.innerHTML=`<div style="background:#fff;border-radius:16px;padding:40px 36px;width:100%;max-width:380px;box-shadow:0 30px 80px rgba(13,27,75,0.25);text-align:center">
     <div style="width:52px;height:52px;background:linear-gradient(135deg,#1A2E6E,#00AAFF);border-radius:12px;display:flex;align-items:center;justify-content:center;margin:0 auto 20px"><svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2"><path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg></div>
     <h3 style="font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;color:#0D1B4B;margin-bottom:8px">Admin Access</h3>
-    <p style="font-size:.86rem;color:#6B7FAB;margin-bottom:24px;line-height:1.6">Enter your password to manage e-books.</p>
+    <p style="font-size:.86rem;color:#6B7FAB;margin-bottom:24px;line-height:1.6">Enter your password to manage AI books.</p>
     <input type="password" id="admin-pw-input" placeholder="Password" style="width:100%;padding:12px 16px;border:1.5px solid rgba(26,46,110,0.15);border-radius:8px;font-size:.95rem;font-family:'Inter',sans-serif;outline:none;margin-bottom:10px;color:#0D1B4B" onkeydown="if(event.key==='Enter')checkAdminPassword()" oninput="document.getElementById('admin-pw-err').textContent=''">
     <p id="admin-pw-err" style="color:#c0392b;font-size:.8rem;margin-bottom:10px;min-height:18px"></p>
     <div style="display:flex;gap:10px">
@@ -1001,7 +1001,7 @@ function openAdmin(){
 
 function closeAdmin(){
   document.getElementById('admin-panel').style.display='none';
-  document.querySelector('.admin-toggle-btn').textContent='⚙ Manage E-Books';
+  document.querySelector('.admin-toggle-btn').textContent='⚙ Manage AI Books';
   adminUnlocked=false;
 }
 
@@ -1028,7 +1028,7 @@ function renderEbooks(){
 function renderAdminList(books){
   const list=document.getElementById('admin-book-list');
   if(!books.length){list.innerHTML='<p style="color:var(--muted);font-size:.88rem">No books added yet.</p>';return;}
-  list.innerHTML='<h4 style="font-family:var(--ff-display);font-weight:700;color:var(--navy);margin-bottom:12px">Current E-Books ('+books.length+')</h4>'+
+  list.innerHTML='<h4 style="font-family:var(--ff-display);font-weight:700;color:var(--navy);margin-bottom:12px">Current AI Books ('+books.length+')</h4>'+
     books.map((b,i)=>`<div class="admin-book-row"><div class="admin-book-row-info"><strong>${b.title}</strong><span>${b.price} · ${b.tag||'No tag'}</span></div><button class="admin-del-btn" onclick="deleteEbook(${i})">🗑 Remove</button></div>`).join('');
 }
 
@@ -1037,7 +1037,7 @@ function addEbook(){
   if(!title||!price||!desc||!link){msg.textContent='Please fill in all required fields.';msg.style.color='#c0392b';return;}
   const books=loadEbooks();books.push({title,price,desc,link,btn,img,tag});saveEbooks(books);renderEbooks();
   ['eb-title','eb-price','eb-desc','eb-link','eb-btn','eb-img','eb-tag'].forEach(id=>document.getElementById(id).value='');
-  msg.textContent='✓ E-Book added!';msg.style.color='var(--cyan)';setTimeout(()=>msg.textContent='',3000);
+  msg.textContent='✓ AI Book added!';msg.style.color='var(--cyan)';setTimeout(()=>msg.textContent='',3000);
 }
 
 function deleteEbook(index){
